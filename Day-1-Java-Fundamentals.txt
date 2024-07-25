@@ -1,0 +1,2431 @@
+
+
+
+Agenda : 
+========
+
+What is a programmming and a programming language ?
+What are the different types of programming languages available in the market ?
+What is the purpose of programming language ?
+What is Java ?
+Differences between c++ and Java ?
+What are the features of Java ?
+How to install java and eclipse IDE in our machines ?
+Datatypes and TypeConversions, Operations on datatypes
+ASCII Values
+Variables and its types
+Operators
+Conditional Statements, Loops
+Scanner Class
+Logical Programs:
+Fibonacci Series
+Armstrong Number 
+Perfect Number 
+Prime number
+Factorial of a number
+Reverse a number
+
+==============================================================================================
+
+
+History of Java :
+===========
+
+ Java was developed by James Gosling, who is known as the father of Java, in 1995.
+  
+  Programming language :
+-------------------------------
+
+    "Programming is the process of creating a set of instructions(program)
+      that tell a computer how to perform a task. "
+
+    program -- set of instructions given to the computer or executed on the     computer.
+   programming -- the process of creating programs.
+
+ To do programming , we need a programming language.
+
+       To do programming there are a vast number of programming languages
+        available in the market for different purposes.
+
+        For specific purpose or functionality, 
+        developers developed a programming language but not based on          popularity.
+
+        For Frontend we have : Html,css,javascript,ReactJs,Angular
+
+          For Backend We have : java,python,C++,NodeJs--framework of Js
+
+            For system programming We have : C
+
+            For database we have : mysql,MangoDB,sql server.
+
+either procedural prog language  i.e., C or object oriented progr language.i.e., Java (for beginners)
+
+Like for different purposes, there are different programming languages.
+
+Then in backend we have different languages, then how is java different from other lanaguages ?
+
+
+So, What are the features that java support before that first let us know 
+what is java :
+
+Java is a programming language, platform & technology.
+
+Java is called as programming language because by using Java, we can write programs.
+
+It is a platform because it provides execution environment to execute our programs.
+
+It is a technology where we use it and and develop our web applications.
+
+List of programming languages:
+C, C++, Java, Python, VC++, Visual Basic.Net, C#.Net, Small talk, Simula, Ada, .. etc.,
+
+Top 5 programming languages are Java, C, Python, C++ & C#
+
+C & C++ are popular for developing system softwares
+Java popular for developing Internet Applications
+Python popular for developing Artificial Intelligence Applications
+C# popular for developing Graphical User Interface Applications
+
+C++,Java, C# , .Net these all are object oriented programming language.
+
+=============================================================================================
+
+First we will see the differences between Java and C++ :
+
+
+Source file is saved with .java extension.
+
+Differences between java and C++ :
+---------------------------------------------
+
+     1.)Execution :
+--------------------
+
+in case of java program execution --
+
+
+ source code -> Compiler -> Byte code-->JVM -->M/C code(binary code or  bit code)
+
+Compiler executes whole code at once.
+
+Intrepreter executes line by line everytime.
+
+In Execution environment, JVM is an intrepreter 
+where it executes byte code and it converts into machine language(0's and 1's)
+
+in case of c++ program --- 
+
+source code ->compiler--> Assembly code ->Assembler--> Machine code(bit code)
+
+Work for today: Learn more about compiler and Intrepreter ?
+
+        2.)Pointers :
+-----------------
+
+      C++ support pointers(security issues may come)  whereas java has no       pointers (to provide security).
+
+         3.)Platform dependency :
+---------------------------
+
+   Java is platform independent(can run in any os)  whereas c++ is platform    dependent.(run in specified os)
+
+   With the help of specific jvm, byte code can run in any os.
+
+ This byte code is platform independent that is making java
+ as platform independent language.
+
+Differences between JDK, JRE, JVM ?
+
+    4.) Compilation :
+------------------
+   Java is both Compiled and Interpreted(JVM) Language
+   Whereas,C++ is only Compiled Language.
+
+    5.)Memory Management :
+-----------------------------
+       Memory Management in Java is System Controlled 
+      Whereas Memory Management in C++ is Manual
+       (Programmer has to take care of memory).
+
+   6.)Multithreading :
+------------------------
+      Java provides built-in support for multithreading. 
+     whereas, 
+       C++ doesn’t have built-in support for threads, 
+      depends on third-party threading libraries.
+
+    7.)Java is only an object-oriented programming language(using classes and objects) 
+   Whereas C++ is both a procedural(using functions(methods)) 
+    and an object-oriented programming language.
+
+These are the main differences between java and c++.
+
+Features of Java :
+-------------------------
+
+        Simple : 
+    -> Java syntax is based on C++
+    -> No explicit pointers and operator overloading concept
+   ->There is no need to remove unreferenced objects because there is an Automatic Garbage Collection in Java.
+
+    **Object-Oriented
+-> Everything in Java is an object
+->Object-oriented means we organize our software as a combination of different types of objects that incorporate both data and behavior
+
+       Portable--moving from one system to another,moving from one        platform to another(byte code)
+
+     Platform independent-- Write once , Run Anywhere(WORA)-->byte code
+
+         Secured-- No pointers
+      -> No explicit pointer
+       ->Java Programs run inside a virtual machine sandbox
+     -> Java language provides these securities by default. Some extra     security can also be provided by an application developer explicitly      through SSL, JAAS, Cryptography, etc.
+
+       Robust ---Strong
+    -> It uses strong memory management.
+   -> There is a lack of pointers that avoids security problems.
+   -> Java provides automatic garbage collection which runs on the Java Virtual Machine to get rid of objects which are not being used by a Java application anymore.
+   -> There are exception handling and the type checking mechanism in Java.
+
+   Architecture neutral  -- because there are no implementation dependent   features
+                                          in C for int 2 bytes for 32bit, again in C only for 64bit same int will occupy 
+                                         4 bytes..., Whereas in java , for both 32-bit and 64-bit same 4 bytes.
+Interpreted  -- executes the code line by line.
+
+   High Performance --> byte code closer to native code, but little bit slower   than c++ since it uses intrepreter during execution.
+
+   Multithreaded
+
+      Distributed - using EJB(Enterprise Java Bean),RMI(Remote method invocation) 
+                             components in java we can develop distributed applications.
+-> This feature of Java makes us able to access files by calling the methods from any machine on the internet.
+
+     Dynamic -- at run time system only will allocate the memory   
+                                     and deallocate the memory for objects after usage.
+
+          
+
+       JDK  & Eclipse installation   : LTS (Long Term Support)
+
+       JDK 17(LTS) : https://www.youtube.com/watch?v=cL4GcZ6GJV8
+
+       Eclipse : https://www.youtube.com/watch?v=xXrPA_ONxK4
+
+
+  Introduction to Eclipse IDE ? along with Java Environmental Setup. (Java   SE 7, 8, 11 and 17 are LTS releases.)(eclipse for java developers, uncheck   unsigned and check trust all content)( workspace is like where your    eclipse files, folders, projects and plugins get saved)       
+
+          Java -> Java Development Kit(JDK ) JDK 1.0 -> 1995  Java 19         version is running
+
+    versions -> LTS(long term support versions) => support for longer time
+
+                    java --version
+                    
+                    javap java.util.Scanner
+
+ steps : for Java environment setup :
+===============================
+1. First check through javac command and uninstall the previous version through control panel
+2. Type oracle java in google search, then click on first link and then download the x64 installer. then exe file will be downloaded then click on next..next...next
+3.Setting the evnironments variables.
+4. Go and check in command prompt javac
+
+Re:Windows 10: Not able to edit path variable in system environment variables ?
+
+Hello,
+
+Try opening an elevated Command Prompt (filename: CMD.EXE) and then running SYSDM.CPL from the command line to open up the System Properties Control Panel applet.  Then go to the Advanced tab, and select the Environment Variables button.  Are you now able to edit the System Environment Variables from this dialog?
+
+
+Windows: cmd > java --version
+Mac : check version by typing in terminal after installation /usr/libexec/java_home -V
+
+
+Setting up path in mac :
+================
+
+1.In terminal, type pwd
+
+2. then, type ls -al
+
+3. If .zshrc file is not there, go ahead and create by this command: touch .zshrc
+
+4. If it is there, open it by typing this command: open .zshrc
+
+5. Then, paste these lines in that file :
+ export JAVA_HOME=$(/usr/libexec/java_home -v 21.0.1)
+export PATH=$JAVA_HOME/bin:$PATH 
+and save it
+
+6. After this type source .zshrc in terminal if not reopen the terminal again.
+
+7. Then verify it by typing echo $JAVA_HOME and java -version
+
+
+Eclipse (Intregrated developmdent evnironment(IDE)), Netbeans , Intellij
+=====================================
+1. go to google and type Eclipse download, then type on 1st link, then exe file will be download
+2.then click on next.. next.. next...
+3. when asked click eclipse for java developers
+4.At next page uncheck unsigned and check trust all content and click on next
+5.click on install
+6. After that once you click on icon, you need to create a workspace (workspace is like where your eclipse files, folders, projects and plugins get saved)
+7. Launch it and close the welcome page and then create the project, click on file, new then other then search java project and then give project name and click on use project specific jre and click on next, finish.
+8.) To create a class, right click on src folder and give class name, check public static void main and then finish.
+
+
+HelloWorld.java
+===============
+
+public class HelloWorld
+{
+
+   public static void main(String[] args)
+   {
+
+          System.out.println("Welcome to Java");      
+    }
+}
+
+Go to cmd > go to the specific folder path> type javac filename for compilation
+                                                                       if there are no errors , type java classname for execution.
+
+Keyword => They specify special meaning by the language itself., (reserved words).
+
+we need to represent the keywords only in small letters.
+
+These keywords cannot be used as a identifiers.
+
+
+     Data Types:
+   ---------------------
+
+       A data type is that which determines what value(literal) a variable can        hold and what are the operations that can be performed on variables.
+
+         In Java, data types are divided into 2 categories:
+
+        1) Primitive Data Types:
+        2) Reference Data Types:
+
+       Primitive Data Types:
+       ------------------------------
+
+       All primitive data types are predefined data types. These datatypes are         defined by the java language itself
+
+       There are 8 primitive data types and these are named by keywords(they        are having specific meaning by language itself)
+
+                1) byte 
+                2) short
+                 3)int
+                 4) long
+                 5) float
+                6) double
+                 7) char
+                 8) boolean
+
+            Referenced Data Types or user-defined datatypes :
+------------------------------------------------------------------
+
+          These datatypes are not defined by the language. They are defined by            the user or programmer.
+
+           Arrays,
+           Strings,
+            Classes,
+            Interfaces, .. etc.,
+
+         Syntax : datatype variableName = literal/value;
+
+
+        So what are the primitive datatypes that are there in java :
+
+          Type	        Size in Bytes	Range (until which value datatype can accept)
+        byte	                                1 byte	            -128 to 127
+short	2 bytes	          -32,768 to 32,767
+int	4 bytes	         -2,147,483,648 to 2,147,483, 647
+long	8 bytes	         -9,223,372,036,854,775,808 to
+                                                9,223,372,036,854,775,807
+float 	4 bytes	         approximately ±3.40282347E+38F    6.7989                         
+                                               (6-7 significant decimal digits)
+double 	8 bytes	        approximately ±1.79769313486231570E+308
+                                               (15 significant decimal digits)
+char    	2 byte	          0 to 65,536 (unsigned) => only positive values       
+                                                                            
+boolean 	 not precisely defined*	true or false
+
+==============================================================================================
+
+            Type conversions or Number Conversions :
+------------------------------------------------------
+         Converting from one data type to another data type is called as type           conversion.
+
+
+       1.)byte
+       2.)short                               
+        3.)int
+       4.)long 
+       5.)float
+       6.)double
+         7.)char
+       8.)boolean
+
+
+                                             8*7 = 56 conversions.
+                                                     -  14 == > Not valid
+                                                       _______
+                                                          42 ==> Valid
+                                                       -  19 ==> system implicitly (widening        conversions)
+                                                      ------------
+                                                           23 ==> programmer has to do explicitly          ( narrowing conversions)
+
+
+These 14 conversions are: boolean cannnot be converted into another type 
+and another type cannot be converted into boolean type ==> 7+7 = 14; 
+
+In these 42 conversions also, 19 conversions are done by system implicitly
+(that means system only will convert). as shown follows :( widening conversions)
+
+byte to short, int,long,float,double => 5
+short to int,long,float,double           => 4
+int to long, float, double                   =>3
+long to float,double                           =>2
+float to double                                    => 1
+char to int,long,float,double             => 4
+                                                              ---------------
+                                                                  19 ==> system implicitly.
+
+
+The following 23 conversions has to done by programmer explicitly. 
+Those are as follows :(narrowing conversions)
+
+byte to char                                                   = 1
+short to char,byte                                         =  2
+int to char,byte,short                                    = 3
+long to char,byte,short,int                           = 4
+float to char,byte,short,int,long                  = 5
+double to char,byte,short,int,long,float     = 6
+char    to byte,short                                       = 2
+                                                                    -------------
+                                                                          23  ==> programmer explicitly.
+                                                                    ------------------
+
+
+coding snippet - 1
+------------------------------
+
+              byte a = 10;
+               int b = a; //byte to int
+               System.out.println(b); //10
+
+coding snippet - 2
+-------------------------
+                           int a = 10;
+                           byte b = (byte)a; 
+                           System.out.println(b);
+
+coding snippet - 3 :
+----------------------------
+
+                    char a = 'a';
+                    int b = a; //char to int
+                    System.out.println(b); //97
+
+
+     coding snippet-4 :
+-------------------------
+
+               int a = 65;
+               char b = (char)a; //int to char
+               System.out.println(b);
+
+coding snippet-5 :
+-------------------------
+
+                                               int a = 65;
+                                               short b = (short)a; //int to short
+                                               System.out.println(b);
+
+coding snippet-6:
+---------------------------------
+
+                                        int a = 129;
+                                        byte b = (byte)a; //int to byte
+                                        float c = b; 
+                                        Sytem.out.println(c);
+
+Operations on Data:(Datatpes)
+-----------------------------------------
+         1) (byte, short, int, char) + (byte, short, int, char) => int
+          2) (byte, short, int, long, char) + long => long
+          3) (byte, short, int, long, float, char) + float => float
+         4) (byte, short, int, long, float, double, char) + double => double
+
+Note: Operations cannot be performed on boolean types.
+
+
+byte + byte ==> int
+
+byte + short ==> int
+
+byte + int ==> int
+
+int + int ==> int
+
+byte + long ==> long
+
+byte + double ==> double
+
+short + int ==>  int
+
+short + short ==> int
+
+double + double ==> double
+
+char + char ==> int
+============================================================
+Ascii Values Chart :
+================
+
+
+Dec  Char                           Dec  Char     Dec  Char     Dec  Char
+---------                           ---------     ---------     ----------
+  0  NUL (null)                      32  SPACE     64  @         96  `
+  1  SOH (start of heading)          33  !         65  A         97  a
+  2  STX (start of text)             34  "         66  B         98  b
+  3  ETX (end of text)               35  #         67  C         99  c
+  4  EOT (end of transmission)       36  $         68  D        100  d
+  5  ENQ (enquiry)                   37  %         69  E        101  e
+  6  ACK (acknowledge)               38  &         70  F        102  f
+  7  BEL (bell)                      39  '         71  G        103  g
+  8  BS  (backspace)                 40  (         72  H        104  h
+  9  TAB (horizontal tab)            41  )         73  I        105  i
+ 10  LF  (NL line feed, new line)    42  *         74  J        106  j
+ 11  VT  (vertical tab)              43  +         75  K        107  k
+ 12  FF  (NP form feed, new page)    44  ,         76  L        108  l
+ 13  CR  (carriage return)           45  -         77  M        109  m
+ 14  SO  (shift out)                 46  .         78  N        110  n
+ 15  SI  (shift in)                  47  /         79  O        111  o
+ 16  DLE (data link escape)          48  0         80  P        112  p
+ 17  DC1 (device control 1)          49  1         81  Q        113  q
+ 18  DC2 (device control 2)          50  2         82  R        114  r
+ 19  DC3 (device control 3)          51  3         83  S        115  s
+ 20  DC4 (device control 4)          52  4         84  T        116  t
+ 21  NAK (negative acknowledge)      53  5         85  U        117  u
+ 22  SYN (synchronous idle)          54  6         86  V        118  v
+ 23  ETB (end of trans. block)       55  7         87  W        119  w
+ 24  CAN (cancel)                    56  8         88  X        120  x
+ 25  EM  (end of medium)             57  9         89  Y        121  y
+ 26  SUB (substitute)                58  :         90  Z        122  z
+ 27  ESC (escape)                    59  ;         91  [        123  {
+ 28  FS  (file separator)            60  <         92  \        124  |
+ 29  GS  (group separator)           61  =         93  ]        125  }
+ 30  RS  (record separator)          62  >         94  ^        126  ~
+ 31  US  (unit separator)            63  ?         95  _        127  DEL
+
+So java is a object oriented programming language :
+
+What is a object oriented programming language ?
+
+A language that supports all principles of an object oriented programming is known as an object oriented programming language.
+
+Object Oriented Principles:
+1) Encapsulation
+2) Abstraction
+3) Inheritance
+4) Polymorphism
+
+To use the above principles in a Java programming, we need the following language constructs:
+1) Class
+2) Object
+
+Class: 
+---------
+
+It is a template or blueprint from which objects are created. It is a logical entity. It can't be physical.
+                               (or)
+It is collection of variables and methods.
+
+class ClassName ==> For every word, first letter should be capital. 
+{
+
+
+}
+
+A class in Java can contain:
+
+Fields
+Methods
+Constructors
+Blocks
+Nested class and interface
+
+
+
+Object :
+-----------
+
+
+An entity that has state and behavior is known as an object e.g., chair, bike, marker, pen, table, car, etc. It can be physical or logical.
+
+                           (or)
+
+Object is also called as instance of a class.
+
+Syntax :
+=====
+
+ClassName objectref = new Constructor();
+
+  HelloWorld hw = new HelloWorld();
+
+
+      HelloWorld -> Class Name
+      hw -> object reference
+      new -> dynamic memory allocation operator -> it will allocate memory to instance variables and instance methods at runtime.
+      HelloWorld() -> Constructor
+
+
+HelloWorld hf = new HelloWorld();
+
+HelloWorld hf1 = new HelloWorld();
+ 
+i can create multiples objects at the same time for the same class.
+
+new -> dynamic memory allocation operator
+
+An object has three characteristics:
+-----------------------------------------------
+
+State: represents the data (value) of an object. (variables)
+
+Behavior: represents the behavior (functionality) of an object such as deposit, withdraw, etc. (methods)
+
+Identity: An object identity is typically implemented via a unique ID. The value of the ID is not visible to the external user. However, it is used internally by the JVM to identify each object uniquely.
+
+
+Keywords or Java Reserved Words :
+========================
+
+-> Java reserved keywords are predefined words, which are reserved for specific functionality or they have a unique meaning in the background.
+
+-> We can not use these keywords as our identifier names, such as class name or method name or variable name or package name.
+
+-> As per oracle documentation, there are around 50 keywords in java as of now as written below: 
+
+abstract	continue	for	  new	switch
+assert***	default	goto*	 package	 synchronized
+boolean	do	if	  private	  this
+break	double	implements  protected	  throw
+byte	else	import	  public	 throws
+case           enum****	instanceof	  return	 transient
+catch	extends	int	   short	 try
+char	final	interface	   static	 void
+class	finally	long	  strictfp**	  volatile
+const*	float	native	   super	while
+
+*	 	not used
+**	 	added in 1.2
+***	 	added in 1.4
+****	 	added in 5.0
+
+Note :
+=======
+-> Although the const and goto are not part of the Java language; But, they are also considered keywords.
+
+-> true, false, and null might seem like keywords, but they are actually literals; Also, you cannot use them as identifiers in your programs.
+
+Identifiers in Java :
+=================
+
+->  Identifiers in Java are symbolic names used for identification.
+
+->  They can be a class name, variable name, method name, package name, constant name, and more.
+
+->  However, In Java, There are some reserved words that can not be used as an identifier.
+
+Rules for Identifiers in Java
+=========================
+
+-> There are some rules and conventions for declaring the identifiers in Java. 
+
+->If the identifiers are not properly declared, we may get a compile-time error. 
+
+Following are some rules and conventions for declaring identifiers:
+
+1. A valid identifier must have characters [A-Z] or [a-z] or numbers [0-9], and underscore(_) or a dollar sign ($).
+
+@!Roshith -> invalid identifier
+_java$Home  ->
+PETERS%M    ->
+PETERS_#$% ->
+PETERS_123   ->
+
+2. There should not be any space in an identifier. 
+
+Roshith Trainer -> invalid identifier.
+
+Roshith_Trainer ->
+
+roshithTrainer ->
+
+
+3. An identifier should not start with a number . 
+
+123peters -> invalid identifier.
+
+
+4. An identifier should be of length 4-15 letters only. However, there is no limit on its length. But, it is good to follow the standard conventions.
+
+
+5. We can't use the Java reserved keywords as an identifier such as int, float, double, char, etc. 
+
+For example, int double is an invalid identifier in Java.
+
+6. An identifier should not be any query language keywords such as SELECT, FROM, COUNT, DELETE, etc.
+
+
+
+Java Notations or Java Good Practices: 
+(if we do not follow also we will not get any error but we should follow to become a good java programmer)
+=================================================================================
+--------------------------- 
+1) Package & Sub Packages: All small letters and sub packages are separated with dot(.) symbol.
+   Ex: java.io, java.lang    HelloWorld, BufferedReader  
+
+2) Class & Interface: Each word first letter is capital and no space between words.
+  Ex: CollegeApplication, StudentManagementApp 
+
+3) Variable & Method: Second word onwards first letter is capital and no space between words.
+   Ex: getFirstSecond(), recordedNumber
+
+
+Declaration rules to a source file(.java file)
+----------------------------------------------------------
+1) A source file can have only one public class.
+2) A source file can have any number of non public classes.
+3) If the source file contains public class then file name and public class name must be same.  
+4) If the source file does not contain public class then no naming restrictions to a file name.
+
+Source file : The file that contains the code in it..... 
+
+ class A    
+{
+
+}
+
+class B
+{
+
+}
+
+public class C
+{
+
+}
+
+
+
+coding snippet 1 :
+
+int true = 1;
+System.out.println(true);
+
+coding snippet 2 :
+
+int True = 1;
+System.out.println(True);
+
+10 
+ 
+10
+
+Variables:
+----------------------
+
+A variable is a container that contains data.
+                               (or)
+A variable is also called as name given to a storage location.    class => HelloWorld
+                                                                                                              variable => firstSecondThird
+  Syntax :  datatype variableName = value/literal;
+                     
+                        int abc; //declaration
+
+                         int abc = 20; //initialisation
+                        
+                          int ABC = 20;
+                          int firstSecondThird = 30; //notation
+                           
+                          int bcd;
+                          bcd = 95; //assignment
+
+
+There are three types of variables in Java:
+
+1) Instance Variables (or) Non-static variables                        
+                                                                                                                  
+2) Class Variables (or) Static variables
+
+3) Local Variables
+
+
+
+1) Instance Variables:
+--------------------------------
+
+-->A variable that defined as a member of a class is called as an instance variable.
+
+ --->Memory allocated to instance variables whenever an object is created.
+
+
+ 
+    A obj = new A();
+
+      A -> className
+      obj -> object reference
+      new A() -> object
+       A() -> constructor
+
+  class A
+  {
+
+     int abc;
+
+   public static void main(String[] args)
+  {
+
+         A obj = new A();
+
+  }
+
+
+-->Instance variables are stored in heap area.
+
+There are  5 types of memory blocks in Ram :
+
+Heap Area => instance variables and all objects
+Method Area
+Stack Area
+PC Registers(Program counter registers)
+Native Stack
+
+There are two ways to access an instance variable.
+ 1) By using object
+ 2) By using object reference
+
+                A obj = new A();
+
+      A -> className
+      obj -> object reference
+      new A() -> object
+       A() -> constructor
+    
+
+Example Program :
+=============
+package com.helloworld;
+
+public class Demo {
+	
+                   int a= 10;
+	static int b = 12;
+
+	public static void main(String[] args) {
+		// TODO Auto-generated method stub
+                                    int d = 345;
+	                  Demo obj = new Demo();
+		obj.a = 25; //by using object reference
+		new Demo().b = 35; //by using object
+		new Demo().a = 75;
+                                       new Demo().b = 35;
+                                   System.out.println(obj.a);//25	
+		System.out.println(new Demo().b);//12	
+                                   System.out.println(new Demo().a);//10	
+                                   System.out.println(e);
+                                   System.out.println(d);
+	}
+
+}
+
+class B
+{
+    static int e =200;
+}
+
+
+2) Class Variables or Static Variables :
+------------------------------------------
+-->A variable that is defined as a static member of a class is called as class variable. 
+-->Memory allocated to class variables whenever class is loaded. 
+-->Class variables are stored in method area. 
+There are four ways to access class variable.
+ 1) Directly //When the class variable is declared in the same class
+ 2) By using class name //When the class variable is declared in the other class
+ 3) By using object
+ 4) By using object reference
+
+class A
+{
+   static int c = 25;
+   main()
+   {
+       A obj = new A();
+        System.out.println(c); //25
+        System.out.println(A.c); //25
+       System.out.println(obj.c); //25
+       System.out.println(new A().c);//25
+       c = 100;
+       A.c = 125;
+       obj.c = 200;
+       new Demo().c = 225;
+       System.out.println(new A().c); //225
+       
+
+    }
+}
+
+
+
+
+Note :
+====
+The 3rd and 4th ways are not suggested for class variables
+
+package com.helloworld;
+
+public class Presentation {
+                  static int a= 10;
+	int b = 12;
+	public static void main(String[] args) {
+               		// TODO Auto-generated method stub
+     
+		Presentation obj = new Presentation(); //25 12     10 12  25 100
+		a = 25;
+		Presentation.a = 35;
+		obj.a = 75;
+		new Presentation().a = 100;
+                     	System.out.println(a);//obj ref
+		System.out.println(new Presentation().b); 
+	}
+
+}
+
+
+
+class A
+{
+
+   static int e = 89;
+
+}
+
+class B
+{
+
+    public static vood main(String args[])   
+    {
+
+        System.out.println(A.e);
+    }
+}
+
+
+3) Local Variables:
+---------------------------------
+-->  A variable that is defined inside a method is called as local variable.
+---> Memory allocated to local variables whenever method is called.
+---> Local variables are stored in stack area. 
+
+---> There is a only one way to access local variable. i.e. directly 
+that too only inside the method.
+
+---> If i wanted to access local variable value , outside a method, it is possible only through return statement.
+
+class Presentation
+{
+                     int A()
+	{
+		static int f = 16;
+		
+		System.out.println(f);
+		
+		return f;
+	}
+
+    psvm(String[] args)
+    {
+       Presentation obj = new Presentation();
+       int a = obj.A();
+       S.o.p(a);
+     }
+}
+
+Note1: Local variables cannot be static in Java.
+Note2: No global variables in Java (Outside the class)
+
+Separate copy of instance variable exist for every object. 
+Only one copy of class variable exist for all objects.
+
+
+<Main points> :
+
+Usage point of view :
+----------------------------
+
+Use instance variable if the value is different for object.( roll no of the student)
+Use class variable if the value is same for all objects. (branch)
+Use local variable to perform the task. (calculation of marks )
+
+Scope and life of variables :
+-----------------------------------
+
+Scope of variable means until where we can access that variable.
+
+Life of variable means until when the variable is available in the memory from its birth to death of variable.
+
+Life Of Variables :
+------------------------
+
+Variable                               life
+ 
+Instance Variable                 Object
+
+Class Variable                       Class             hello(arg1,arg2...)
+
+Local Variable                       Method            {
+                                                                                 int a = 10
+                                                                                  }
+
+
+Method Parameter                 Method
+
+Block Variable                        Block
+
+Scope of Variables :
+------------------------------
+
+Variable                                  Scope
+  
+Block Variable                        Block only
+
+Local Variable                        Method
+
+Method Parameter                  Method
+
+Instance Variables                   based on access modifiers (public private protected 
+                                                                                             default)
+
+Class Variables                          based on access modifiers
+
+Java Comments
+===============
+
+Comments can be used to explain Java code, and to make it more readable. It can also be used to prevent execution when testing alternative code.
+
+Single-line Comments
+==================
+
+Single-line comments start with two forward slashes (//).
+
+Any text between // and the end of the line is ignored by Java (will not be executed).
+
+Java Multi-line Comments
+=======================
+
+Multi-line comments start with /* and ends with */.
+
+Any text between /* and */ will be ignored by Java.
+
+Single or multi-line comments?
+========================
+It is up to you which you want to use. Normally, we use // for short comments, and /* */ for longer.
+
+
+1. Create a studentapp class and create 4 student objects
+ 2. Take 4 variables : rollNo, Name, branch, CollegeName.
+ 3. Print the rollNo, Name, branch, CollegeName for each student
+4. If student branch is cse, take 3 subjects and calculate percentage according and print it up.
+5.If student branch is ece, take 2 subjects and calculate percentage accordingly and print it up.
+
+
+
+
+
+
+
+Methods :
+-------
+
+A Group of statements in to single logical unit is called as method. 
+
+Methods are used to perform the task.
+
+
+    main()
+   {
+
+           ------------
+-------------------------
+
+
+    abc();
+    abc();
+    abc();
+    abc();
+    abc();
+
+}
+
+
+  void abc()
+   {
+
+       System.out.println("Hello!");
+       System.out.println("Welcome!");
+       System.out.println("To Java!");
+
+    }
+
+
+-> To perform the task or business logic
+
+-> If set of statements are gathered into one block and that block of statements will perform same task is nothing but a method
+
+
+   Syntax :
+==========
+
+            Access Modifier ReturnType methodName(Method Arguments or Parameters)
+            {
+
+               int c = a+b;
+                 
+            }
+
+     main()
+    {
+           int a = 10;
+           int b = 12;
+            int d  = abc(a,b);
+            System.out.println(d);
+     }
+
+-> Return type can be of primitive or referenced datatype.
+
+-> methodName -> From second word onwards, 1st letter should be capital and it cannot be a keyword.
+
+-> return statement is optional, if the return type is there than only you should use return statement
+
+-> void is also called as return type but it returns nothing, so when the method returns nothing, then i will use void.
+
+Benefits of methods :
+
+1.)Modularity. ==> dividing into parts
+
+2.)Reusability.==> specific method i will use it again and again.
+
+
+In java , there exists Two types of methods same like variables :
+
+1.) Instance methods (i can call it through by using object or object reference)
+
+2.) Class Methods or static methods (i can call it through by using directly,classname,object,and objref)
+
+================================================
+
+    class A
+    {
+          int a = 234;
+          static float b = 3455678.90;
+           void a()
+          {
+                  float b = a;
+                  System.out.println(b);
+                  System.out.println("A");
+
+         }
+
+          static void abc()
+          {
+                  int b = 234;
+                System.out.println(b);
+
+             }          
+       
+
+         psvm(String[] args)
+         {
+            
+             static int d = 235;
+             A obj = new A();
+             Sysout(d);
+             Sysout(new A().b);
+             Sysout(obj.a);
+             Sysout(b);
+             Sysout(new A().b);
+            
+  
+
+        }
+
+
+    }
+
+ In java, Methods are divided into 4 categories :
+
+1.Methods with arguments and with return value
+
+     class Demo
+     {
+                           
+               float add()
+              {
+
+                   float c = a+b;
+                  return c;   
+            }
+             public static void main(String[] args)
+            {
+               float d = new Demo().add(12,28);
+               System.out.println(d);
+                
+ 
+              
+          }
+}
+
+
+2.Methods with arguments and without return value
+
+ class Demo
+ {
+                             12       28
+                int add(int a, int b)
+              {
+
+                      int c = a+b;
+                     System.out.println(c);
+               }
+             public static void main(String[] args)
+            {
+                    new Demo().add(12,28);
+            
+            }
+  }
+
+
+3.Methods without arguements and with return value
+
+
+4.Methods without arguments and without return value
+--------------------------------------------------------------------
+
+
+class Demo
+{
+                           
+                void add()
+              {
+
+                  int c = 12+28;
+                  System.out.println(c);
+                   
+              }
+            public static void main(String[] args)
+            {
+                    new Demo().add();
+              
+          }
+ }
+
+
+Garbage Collector :
+------------------------------
+
+It is a jvm component and it collects the garbage whenever cpu gets free time beacuse Garbage collector priority is latest priority.( Priority ranges from 1 to 10)
+ 
+Our main method priority as 5;
+
+Garbage means unused objects.
+
+It is possible to call to garbage collector manually or explicitly by using gc() method of Java.lang.System class.
+
+How the garbage collector works ???
+
+Let me explain through a program :
+
+
+class Demo
+{
+    Demo()
+    {
+
+      }
+  
+
+  int x = 5;
+  int y=10;
+  psvm(String[] args)
+  {
+    Demo obj = new Demo();
+    Demo obj1 = new Demo();
+    Demo obj2  = new Demo();
+
+     obj = null;
+      
+     obj1 = obj2;
+
+   }
+}
+
+Quiz : 1
+
+class A
+{
+   public static int hello()
+   {
+
+      int a = 10;
+      System.out.println(a);
+      return a;
+
+   }
+   psvm(String[] args)
+   {
+      System.out.println(hello());
+    }
+}
+
+
+
+=============================================================================================
+Java Operators
+===============
+
+Operators are used to perform operations on variables and values.
+
+Java divides the operators into the following groups:
+
+-> Arithmetic operators
+-> Assignment operators
+-> Comparison operators
+-> Logical operators
+-> Bitwise operators
+
+Arithmetic Operators
+==================
+Arithmetic operators are used to perform common mathematical operations.
+
+Operator	Name	Description	                                           Example	
++	Addition	           Adds together two values	                           x + y	
+-	Subtraction          Subtracts one value from another	         x - y	
+*	Multiplication      Multiplies two values	                             x * y	
+/	Division	            Divides one value by another	           x / y	
+%	Modulus	             Returns the division remainder	           x % y	
+++	Increment	             Increases the value of a variable by 1	             ++x	
+--	Decrement	             Decreases the value of a variable by 1               --x
+
+Java Assignment Operators
+========================
+
+Assignment operators are used to assign values to variables.
+
+A list of all assignment operators:
+
+Operator	Example	Same As	
+=	x = 5	x = 5	
++=	x += 3	x = x + 3	
+-=	x -= 3	x = x - 3	
+*=	x *= 3	x = x * 3	
+/=	x /= 3	x = x / 3	
+%=	x %= 3	x = x % 3	
+&=	x &= 3	x = x & 3	
+|=	x |= 3	x = x | 3	
+^=	x ^= 3	x = x ^ 3	
+>>=	x >>= 3	x = x >> 3	
+<<=	x <<= 3	x = x << 3
+
+Java Comparison Operators
+========================
+
+Comparison operators are used to compare two values (or variables). This is important in programming, because it helps us to find answers and make decisions.
+
+The return value of a comparison is either true or false. 
+
+Operator	Name	                                    Example	
+==	Equal to	                                     x == y	
+!=	Not equal	                                      x != y	
+>	Greater than	                   x > y	
+<	Less than	                                       x < y	
+>=	Greater than or equal to	x >= y	
+<=	Less than or equal to	                    x <= y
+
+Java Logical Operators
+===================
+You can also test for true or false values with logical operators.
+
+Logical operators are used to determine the logic between variables or values:
+
+Operator	Name	                   Description	                                                                Example	
+&& 	Logical and	Returns true if both statements are true	                   x < 5 &&  x < 10	
+|| 	Logical or	                    Returns true if one of the statements is true	                   x < 5 || x < 4	
+!	Logical not	 Reverse the result, returns false if the result is true	!(x < 5 && x < 10)
+
+
+Java Comments
+===============
+
+Comments can be used to explain Java code, and to make it more readable. It can also be used to prevent execution when testing alternative code.
+
+Single-line Comments
+==================
+
+Single-line comments start with two forward slashes (//).
+
+Any text between // and the end of the line is ignored by Java (will not be executed).
+
+Java Multi-line Comments
+=======================
+
+Multi-line comments start with /* and ends with */.
+
+Any text between /* and */ will be ignored by Java.
+
+Single or multi-line comments?
+========================
+It is up to you which you want to use. Normally, we use // for short comments, and /* */ for longer.
+
+Control Statements :
+====================
+
+-> Control Statements are the statements that helps in selective execution of the program or controls the flow of execution of the program.
+
+ 1. Conditional Statements or Decision-Making Statements
+
+ 2. Loops
+
+
+Working with conditions in java :(Conditional Stataements)
+--------------------------------------------
+
+      main()
+     {
+
+
+           =====
+=================
+}
+
+
+
+
+
+
+There are 5 categories of conditional statements:
+
+1.If - then Statement
+
+2.If-then Else Statement
+
+3. Else-If Ladder
+
+4.Nested If-else Statement
+
+5. Switch Statement.
+
+1. Java if (if-then) Statement
+--------------------------------------------
+The syntax of an if-then statement is:
+
+                                 if (condition) {
+                                 // statements
+                                  }
+                            -----------
+
+if(age>=18)
+{
+   //Statements.
+}
+
+Here, for example if we take 
+condition is a boolean expression such as age >= 18.
+
+if condition evaluates to true, statements are executed
+if condition evaluates to false, statements are skipped
+
+2. )Java if...else (if-then-else) Statement
+----------------------------------------------
+
+In The if statement it executes a certain section of code 
+if the test expression is evaluated to true. 
+However, if the test expression(condition) is evaluated to false, it does nothing.
+
+In this case, we can use an optional else block. 
+Statements inside the body of else block are executed 
+if the test expression is evaluated to false.
+ This is known as the if-...else statement in Java.
+
+if the condition evalutes to true, the inside block statements are executed ,
+ if it is false the else statements are executed.
+
+The syntax of the if...else statement is:
+
+if (condition) {
+  // codes in if block
+}
+else {
+  // codes in else block
+}
+
+
+Ex :
+===
+
+       if(age>=18)
+       {
+             System.out.println("Please go inside the theatre!");
+       }
+       else
+       {
+               System.out.println("Please go back to your home!");
+       }
+
+
+Here, the program will do one task (codes inside if block) if the condition is true 
+and another task (codes inside else block) if the condition is false.
+
+3. ) Java if...else...if Statement (else - if ladder)
+-----------------------------------------------
+In Java, we have an if...else...if ladder, that can be used to execute one block of code
+ among multiple other blocks.
+
+if (condition1) {
+  // codes
+}
+else if(condition2) {
+  // codes
+}
+else if (condition3) {
+  // codes
+}
+.
+.
+else {
+  // codes
+}
+------
+----------
+
+Here, if statements are executed from the top towards the bottom. 
+When the test condition is true, codes inside the body of that if block is executed. 
+And, program control jumps outside the if...else...if ladder.
+
+If all test expressions are false, codes inside the body of else are executed.
+
+4. Java Nested if..else Statement
+-------------------------------------------
+In Java, it is also possible to use if..else statements inside an if...else statement. 
+It's called the nested if...else statement.
+
+
+if(condition)
+{
+  ----------
+  if(condition)
+  {
+   
+  }
+  else
+  {
+
+   }
+}
+else
+{
+
+}
+
+
+
+Here's a program to find the largest of 3 numbers using the nested if...else statement.
+
+
+class Main {
+  public static void main(String[] args) {
+  
+    // declaring double type variables
+    Double n1 = -1.0;
+    Double n2 = 4.5;
+   Double n3   = -5.3;
+   Double largest = 0;
+
+    // checks if n1 is greater than or equal to n2
+    if (n1 >= n2) {
+
+      // if...else statement inside the if block
+      // checks if n1 is greater than or equal to n3
+      if (n1 >= n3) {
+        largest = n1;
+      }
+
+      else {
+        largest = n3;
+      }
+    } else {
+
+      // if..else statement inside else block
+      // checks if n2 is greater than or equal to n3
+      if (n2 >= n3) {
+        largest = n2;
+      }
+
+      else {
+        largest = n3;
+      }
+    }
+
+    System.out.println("Largest Number: " + largest);
+  }
+}
+
+In the above program, we have assigned the value of variables ourselves
+ to make this easier.
+
+However, in real-world applications,
+ these values may come from user input data, log files, form submission, etc.
+
+Thats all about control statements.
+
+Switch Statement :
+----------------------------
+
+In Java, Switch statements are similar to if-else-if statements. 
+The switch statement contains multiple blocks of code called cases and 
+a single case is executed based on the value of the variable which is being switched. 
+The switch statement is easier to use instead of if-else-if statements.
+ It also enhances the readability of the program.
+
+
+Points to be noted about switch statement:
+---------------------------------------------------
+
+The case variables can be int, short, byte, char, or enumeration. 
+String type is also supported since version 7 of Java
+Cases cannot be duplicate
+Default statement is executed when any of the case doesn't match 
+the value of expression. It is optional.
+
+Break statement terminates the switch block when the condition is satisfied.
+It is optional, if not used, next case is executed.
+
+While using switch statements, we must notice that the case expression 
+will be of the same type as the variable. However, it will also be a constant value.
+
+The syntax to use the switch statement is given below :
+
+                   
+switch (expression){  
+    case value1:  
+     statement1;  
+     break;  
+    .  
+    .  
+    .  
+    case valueN:  
+     statementN;  
+     break;  
+    default:  
+     default statement;  
+} 
+------ 
+
+Consider the following example to understand the flow of the switch statement. 
+
+public class Student {  
+public static void main(String[] args) {  
+
+int num = 10;  
+
+switch (num){  
+case 0:  
+System.out.println("number is 0");  
+break;
+case 1:  
+System.out.println("number is 1");  
+break;
+case 2 :
+System.out.println("number is 2");
+break
+default:  
+System.out.println(num);  
+}  
+}  
+}
+----------------  
+
+While using switch statements, we must notice that the case expression will be of the same type as the variable. However, it will also be a constant value. The switch permits only int, string, and Enum type variables to be used.
+
+
+Create a CollegeApp Class and 4 students(for 1 student 1 object)
+
+with properties rollNo,CollegeName,Branch
+
+If Branch is cse allocate 5 sub. with marks and calculate percentage
+
+If Branch is ece allocate 3 sub. with marks and calculate percentage
+
+if in o/p: if I give s1 : it should print 1st student percentage and so..on
+
+
+
+
+
+
+
+
+  Programs :
+-------------------------
+
+ Java Program to check if number is positive or negative //if 
+ Java Program to check if number is even or odd   //if
+  Simple calculator program using switch statement. //switch
+  
+Loops in Java
+================
+
+{
+
+
+   ======
+==========
+
+===========
+
+==============
+
+====================
+
+==========
+==========
+============
+================
+
+
+
+
+
+
+
+The Java loop is used to iterate a part of the program several times. 
+
+There are three types of loops in Java :
+
+1.) while loop
+
+2.) for loop
+
+3.) do while loop
+
+
+
+1.) While loop
+================
+
+ A while loop is a control flow statement that allows code to be executed repeatedly based on a given Boolean condition.
+
+ The while loop can be thought of as a repeating if statement. 
+
+ While loop starts with the checking of condition. If it evaluated to true, then the loop body statements are executed otherwise first statement following the loop is executed. For this reason it is also called Entry control loop
+
+Once the condition is evaluated to true, the statements in the loop body are executed. Normally the statements contain an update value for the variable being processed for the next iteration.
+
+When the condition becomes false, the loop terminates which marks the end of its life cycle.
+
+Syntax :
+
+while (boolean condition)
+{
+    statements...
+    incr/decr;
+}
+
+Example Program :
+================
+
+public class WhileExample {  
+public static void main(String[] args) {  
+    int i=10;  
+    while(i>=1){  
+        System.out.println(i);  
+    i = i-1;  
+    }  
+}  
+}  
+
+2.) For loop :
+=============
+
+The Java for loop is used to iterate a part of the program several times. 
+
+
+Note :
+======
+
+If the number of iteration is fixed, it is recommended to use for loop.
+
+There are three types of for loops in Java :
+
+1.)Simple for Loop
+
+2.)For-each or Enhanced for Loop
+
+3.)Labeled for Loop
+
+1.) Simple for loop 
+
+A simple for loop is the same as C/C++. We can initialize the variable, check condition and increment/decrement value. 
+
+It consists of four parts:
+
+Initialization: It is the initial condition which is executed once when the loop starts. Here, we can initialize the variable, or we can use an already initialized variable. It is an optional condition.
+
+Condition: It is the second condition which is executed each time to test the condition of the loop. It continues execution until the condition is false. It must return boolean value either true or false. It is an optional condition.
+
+Increment/Decrement: It increments or decrements the variable value. It is an optional condition.
+Statement: The statement of the loop is executed each time until the second condition is false
+
+Syntax:
+
+for(initialization; condition; increment/decrement){    
+//statement or code to be executed    
+}    
+
+Example Program :
+==================
+
+public class ForExample {  
+public static void main(String[] args) {  
+    //Code of Java for loop  
+    for(int i=1;i<=10;i=i+1){  
+        System.out.println(i);  
+    } 
+
+ 
+}  
+}  
+
+ Java Nested for Loop
+
+ If we have a for loop inside the another loop, it is known as nested for loop. The inner loop executes completely whenever outer loop executes.
+
+Example Program :
+=============
+
+public class NestedForExample {  
+public static void main(String[] args) {  
+//loop of i  
+for(int i=1;i<=3;i++){  
+//loop of j  
+for(int j=1;j<=3;j++){  
+        System.out.println(i+" "+j);  
+}//end of i  
+}//end of j  
+}  
+}  
+
+2.) Java for-each Loop
+==================
+
+The for-each loop is used to traverse array or collection in Java.
+
+ It is easier to use than simple for loop because we don't need to increment value and use subscript notation.
+
+t works on the basis of elements and not the index. 
+
+It returns element one by one in the defined variable value.
+
+Syntax:
+
+for(data_type variable : array_name){    
+//code to be executed    
+}    
+
+Example Program :
+===============
+
+public class ForEachExample {  
+public static void main(String[] args) {  
+    //Declaring an array  
+    int arr[]={12,23,44,56,78};  
+    //Printing array using for-each loop  
+    for(int i:arr){  
+        System.out.println(i);  
+    }  
+}  
+}  
+
+3.) Java Labeled For Loop
+====================
+We can have a name of each Java for loop. 
+
+To do so, we use label before the for loop. 
+
+It is useful while using the nested for loop as we can break/continue specific for loop.
+
+Syntax:
+
+labelname:    
+for(initialization; condition; increment/decrement){    
+//code to be executed    
+}    
+
+Example Program :
+===============
+public class LabeledForExample {  
+public static void main(String[] args) {  
+    //Using Label for outer and for loop  
+    aa:  
+        for(int i=1;i<=3;i++){  
+            bb:  
+                for(int j=1;j<=3;j++){  
+                    if(i==2&&j==2){  
+                        break bb;  
+                    }  
+                    System.out.println(i+" "+j);  
+                }  
+        }  
+======
+}  
+}  
+
+Example Program 2 :
+===================
+
+public class LabeledForExample2 {  
+public static void main(String[] args) {  
+    aa:  
+        for(int i=1;i<=3;i++){  
+            bb:  
+                for(int j=1;j<=3;j++){  
+                    if(i==2&&j==2){  
+                        break bb;  
+                    }  
+                    System.out.println(i+" "+j);  
+                }  
+        }  
+}  
+}  
+
+
+Note:
+ The break and continue keywords breaks or continues the innermost for loop respectively.
+
+3.) java do-while loop :
+
+The Java do-while loop is used to iterate a part of the program repeatedly, until the specified condition is true. 
+
+If the number of iteration is not fixed and you must have to execute the loop at least once, it is recommended to use a do-while loop.
+
+Java do-while loop is called an exit control loop. 
+
+Therefore, unlike while loop and for loop, the do-while check the condition at the end of loop body.
+
+ The Java do-while loop is executed at least once because condition is checked after loop body.
+
+Syntax:
+
+do{    
+
+//code to be executed / loop body  
+//update statement 
+
+  
+}while (condition);    
+
+Example Program :
+=============
+
+public class DoWhileExample {    
+public static void main(String[] args) {    
+    int i=1;    
+    do{    
+        System.out.println(i);    
+    i++;    
+    }while(i<=10);    
+}  
+
+  
+}    
+
+
+Java Infinitive for Loop :
+===================
+
+Syntax:
+
+for(;;){  
+//code to be executed  
+}  
+
+Java Infinitive While Loop
+=====================
+
+Syntax:
+
+while(true){  
+//code to be executed  
+}  
+
+Java Infinitive do-while Loop
+===================
+
+If you pass true in the do-while loop, it will be infinitive do-while loop.
+
+do{  
+//code to be executed  
+}while(true);  
+
+Java Break Statement :
+===================
+
+When a break statement is encountered inside a loop, the loop is immediately terminated and the program control resumes at the next statement following the loop.
+
+The Java break statement is used to break loop or switch statement. 
+
+It breaks the current flow of the program at specified condition. In case of inner loop, it breaks only inner loop.
+
+We can use Java break statement in all types of loops such as for loop, while loop and do-while loop.
+
+Syntax:
+
+jump-statement;    
+break;   
+
+Java Break Statement with Loop :
+
+Example Program :
+================
+public class BreakExample {  
+public static void main(String[] args) {  
+    //using for loop  
+    for(int i=1;i<=10;i++){  
+        if(i==5){  
+            //breaking the loop  
+            break;  
+        }  
+        System.out.println(i);  
+    }  
+}  
+}  
+
+Java Break Statement with Inner Loop :
+===========================
+
+Example Progarm :
+============
+
+public class BreakExample2 {  
+public static void main(String[] args) {  
+            //outer loop   
+            for(int i=1;i<=3;i++){    
+                    //inner loop  
+                    for(int j=1;j<=3;j++){    
+                        if(i==2&&j==2){    
+                            //using break statement inside the inner loop  
+                            break;    
+                        }    
+                        System.out.println(i+" "+j);   11
+                                                                               12 13 21
+                    } 
+   
+            }    
+}  
+}  
+
+Java Break Statement in while loop :
+=========================
+
+Example Program :
+==============
+
+public class BreakWhileExample {  
+public static void main(String[] args) {  
+    //while loop  
+    int i=1;  
+    while(i<=10){  
+        if(i==5){  
+            //using break statement  
+            i++;  
+            break;//it will break the loop  
+        }  
+        System.out.println(i);  
+        i++;  
+    }  
+}  
+}  
+
+Java Break Statement in do-while loop :
+===========================
+
+Example Program :
+==============
+
+public class BreakDoWhileExample {  
+public static void main(String[] args) {  
+    //declaring variable  
+    int i=1;  
+    //do-while loop  
+    do{  
+        if(i==5){  
+           //using break statement  
+           i++;  
+           break;//it will break the loop  
+        }  
+        System.out.println(i);  
+        i++;  
+    }while(i<=10);  
+}  
+}  
+
+Java Continue Statement
+==================
+The continue statement is used in loop control structure when you need to jump to the next iteration of the loop immediately. 
+
+It can be used with for loop or while loop or do- while loop
+
+Syntax:
+
+jump-statement;    
+continue;   
+
+Java Continue Statement Example:
+============================
+
+public class ContinueExample {  
+public static void main(String[] args) {  
+    //for loop  
+    for(int i=1;i<=10;i++){  
+        if(i==5){  
+            //using continue statement  
+            continue;//it will skip the rest statement  
+        }  
+        System.out.println(i);  
+    }  
+}  
+}  
+
+1
+2
+3
+4
+6
+7
+8
+9
+10
+
+Return Statement:
+
+->  The return statement is used to explicitly return from a method. 
+
+-> That is, it causes program control to transfer back to the caller of the method.
+
+Example:
+
+// Java program to illustrate using return
+import java.util.*;
+ 
+public class Return {
+    public static void main(String args[])
+    {
+        boolean t = true;
+        System.out.println("Before the return.");
+ 
+        if (t)
+            return;
+ 
+        // Compiler will bypass every statement
+        // after return
+        System.out.println("This won't execute.");
+    }
+}
+Output
+Before the return.
+
+Logical Programs in Java using the above concepts :
+======================================
+
+1) Fibonacci Series
+
+Fibonacci series is a special type of series in which the next term is the sum of the previous two terms. For example, if 0 and 1 are the two previous terms in a series, then the next term will be 1(0+1).
+
+FibonacciWithoutRecursion.java
+
+import java.util.*;  
+class FibonacciWithoutRecursion{    
+    public static void main(String args[])    
+    {      
+        int number1=0, number2=1, number3, i, count=5;      
+        //printing 0 and 1  
+        System.out.print(number1+" "+number2);  
+          
+        //0 and 1 is already printed so loop will start with 2  
+        for(i=2; i<count; ++i)      
+        {      
+            number3 = number1+number2;      
+            System.out.print(" "+number3);      
+            number1 = number2;      
+            number2 = number3;      
+        }      
+    }  
+}  
+
+2) Armstrong Number :
+=======================
+
+An Armstrong Number is a special positive number whose sum of cubes of its digit is equal to that number. The number 154 is an Armstrong number because if we perform the sum of cubes of each digit, it will result in the same number.
+
+= 153
+
+= (1)3+(5)3+(3)3
+
+= 1+125+27
+
+= 153
+
+class ArmstrongNumber{    
+  public static void main(String[] args)  {    
+    int sumOfCube=0,a,temp;    
+    int number=153;    
+    temp=number;    
+    while(number>0)    
+    {    
+        a=number%10; //Getting last digit  
+        number=number/10;  //Removing last digit from number  
+        sumOfCube=sumOfCube+(a*a*a); //Calculating sum of cubes of digits    
+    }    
+    if(temp==sumOfCube)    
+        System.out.println(temp+" is an armstrong number");     
+    else    
+        System.out.println(temp+ "is not an armstrong number");     
+   }    
+}  
+
+Perfect Number (Assignment)
+=============
+
+Just like the Armstrong number, the Perfect Number is also a special type of positive number. When the number is equal to the sum of its positive divisors excluding the number, it is called a Perfect Number. 
+
+28 ->  The divisors of 28 are 1, 2, 4, 7, and 14. 
+
+28 = 1+2+4+7
+
+28 = 28
+
+Prime number(Assignment)
+========================
+
+When the number is divided greater than 1 and divided by 1 or itself is referred to as the Prime number.
+
+0 and 1 are not counted as prime numbers.
+
+ Factorial of a number(Assignment)
+===========================
+
+The product of all positive integers which are less than or equal to the given positive number is referred to as the factorial of that given integer number.
+
+5! = 5*4*3*2*1 = 120
+
+ Reverse a number
+==================
+
+input  : 1234567
+
+output : 7654321
+
+public class ReverseNumber{  
+
+ public static void main(String[] args) {   
+      
+          int rev = 0;  
+        int temp = number;  
+        while(number != 0)     
+        {    
+            //Calculating reminder  
+            int rem = number % 10;   
+            //multiplying variable reverse by 10 and adding the reminder into it  
+            rev = rev * 10 + rem;    
+            //Divide the number  
+            number = number/10;    
+        }    
+        System.out.println(rev+" is the reverse of the number "+temp);    
+    }  
+}  
+
+Palindrome number (Assignment)
+=================
+
+A palindrome number is a special number. After reversing a number, if it is the same as the original number referred to as a palindrome number. There can be a series of palindrome numbers. For example, 121, 232, 34543, 171, and 343 etc.
+
+
+
+So, What is  a Scanner class :
+----------------------------------------
+
+Scanner is a class in java.util package used for obtaining the input from keyboard or console
+  of the primitive types like int, double, etc. and strings.
+
+//command prompt or google
+
+javap java.util.Scanner //i will get all the methods and constructors of the specific scanner class.
+
+It is the easiest way to read input in a Java program, 
+though not very efficient if you want an input method for scenarios where time is a constraint like in competitive programming.
+
+For every class in java, we need to create an object to use the methods and variables inside it.
+
+How to create an object  in java for Scanner class :
+==================================
+
+To create an object of Scanner class, we usually pass the predefined object System.in, 
+which represents the standard input stream. 
+
+import java.util.Scanner;
+
+Scanner sc = new Scanner(System.in); //object creation
+
+javap java.util.Scanner
+
+String x = sc.next().charAt(0);     Welcome                    //taking single character from a string.
+
+We may pass an object of class File if we want to read input from a file.
+
+To read numerical values of a certain data type XYZ, the function to use is nextFloat(). 
+
+    Scanner a = new Scanner(System.in);
+    Float y = a.nextFloat();
+
+For example, to read a value of type short, we can use nextShort()
+
+To read strings, we use nextLine().
+
+For reading String, next() and nextLine();
+
+
+
+To read a single character, we use next().charAt(0). 
+next() function returns the next token/word in the input as a string and 
+charAt(0) function returns the first character in that string.
+
+Syntax :
+-----------
+
+Scanner sc = new Scanner(System.in);
+
+// Java program to read some values using Scanner
+// class and print their mean.
+import java.util.Scanner;
+
+public class ScannerDemo2
+{
+	public static void main(String[] args)
+	{
+		// Declare an object and initialize with
+		// predefined standard input object
+		Scanner sc = new Scanner(System.in);
+
+		// Initialize sum and count of input elements
+		int sum = 0, count = 0;
+
+		// Check if an int value is available
+		while (sc.hasNextInt())
+		{
+			// Read an int value
+			int num = sc.nextInt();
+			sum += num;
+			count++;
+		}
+		int mean = sum / count;
+		System.out.println("Mean: " + mean);
+	}
+}
+
+How to take String input in Java :
+-----------------------------------------------
+
+Java nextLine() method :   welcome
+--------------------------------------
+The nextLine() method of Scanner class is used to take a string from the user. 
+It is defined in java.util.Scanner class. 
+
+The nextLine() method reads the text until the end of the line.
+ After reading the line, it throws the cursor to the next line.
+
+Appleis healthy. ==>nextLine();
+
+ String str = sc.nextLine();
+
+String str = sc.next().charAt(0);
+
+Apple ==> next(); //until the space is found
+
+The signature of the method is:
+
+public String nextLine()  
+
+String st = sc.nextLine();
+
+
+Java next() method:
+----------------------------------
+Java next() method can read the input before the space is found.
+
+ It cannot read two words separated by space.
+ It retains the cursor in the same line after reading the input.
+
+The signature of the method is:
+
+public String next()  
+
+import java.util.Scanner;
+
+class Main
+{
+	static int studentRollNo;
+	static String nameOfTheStudent;
+	static char initial;
+	static int mathsMarks;
+	static int englishMarks;
+	static int scienceMarks;
+	public static void main(String[] args)
+	{
+		//for taking input from keyboard i need to create object of 
+		//scanner class
+		
+		Scanner sc =new  Scanner(System.in);
+		
+		//how to input from string, there exists two methods next() and nextLine()
+	    nameOfTheStudent = sc.nextLine();
+		
+		initial = sc.next().charAt(0);
+		
+		studentRollNo = sc.nextInt();
+		
+		mathsMarks = sc.nextInt();
+		
+		englishMarks = sc.nextInt();
+		
+		scienceMarks = sc.nextInt();
+		
+		
+		System.out.println(studentRollNo+""+nameOfTheStudent + " "+initial+" "+mathsMarks+" "+englishMarks+" "+scienceMarks);
+			
+		
+	}
+}
+
+
+ next() => one by one word if i wanted read from keyboard in string
+
+ nextLine() => for reading whole sentence.
+
+
+So, This is about the scanner class
+

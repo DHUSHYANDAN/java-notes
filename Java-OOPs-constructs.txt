@@ -1,0 +1,1971 @@
+Arrays
+static keyword
+this keyword
+Access modifiers
+Constructors and its types
+this(), this(args)
+constructor overloading
+final keyword
+Inheritance
+Polymorphism
+
+What is a Array ?
+
+It is a collection of similar data elements or  datatype elements.
+
+The array will store in a contiguous location.
+
+Why we will use arrays ?
+
+variable -- the storage location in the memory where we store values in it.
+
+int a = 10;         Synatx : datatype variablename = some value;
+                                          int abc = 100;
+
+
+int student1 = 101;
+int student2 = 102;
+int student3 = 103;
+int student4= 103;
+int student5 = 104;
+int student6 = 10000;
+int student7 = 105;
+--
+-
+-
+int student100 = 1000;
+
+
+To avoid thse kind of hectic codes and to make our code simple and easy to read , arrays came.
+
+It is a kind easy storage of data. 
+
+int student[100] = {101,102,103,104........,200};
+                                     0        1    2     3
+We will iterate or to use the elements of an array we will use indexed approach.
+
+array index always start with 0 and ends with (size-1)
+
+System.out.println(student[1]); // if it is a variable value //random
+
+for(int i =0;i<99;i++) //for loop
+{
+     System.out.println(student[i]);
+}
+
+for(int a : student) //for each == > We cannot access random elements
+                                                                 We can only access elements in an order.
+{
+   System.out.println(a);
+}
+
+
+How to declare an array in java ?
+
+In Java , array itself is an object.    Syntax : datatype[] arrayreference = new datatype[size];
+
+int[] arr = new int[size];
+int []arr = new int[size];
+int arr[] = new int[size];
+
+Quiz - 2 :
+
+how do we create an object ?
+
+class A
+{
+
+
+}
+
+class Main
+{
+   public static void main(String[] args)
+   {
+          A onj = new A();
+    }
+}
+
+In java, Array is an object.
+
+Syntax how to declare an array :
+=====================================
+
+  Dataype ArrayReference[] = new Datatype[size]; // array declaration
+
+  ClassName objectReference = new ClassName(); // object declaration
+
+
+int n = sc.nextInt();
+int a[] = new int[n];
+    
+
+Advantages :
+======================
+ 1. code optimisation
+
+2. Random access through indexed approach.
+
+Disadvantages :
+==================
+
+1. multiple datatypes are not allowed
+
+2.size is limited(Once we declare it we cannot change it)
+
+What are the types of arrays in java ?
+
+1 dimension array or single dimension array-- only 1 row and defined columns
+
+int arr[] = new int[10];   
+
+arr[2]
+
+
+2 dimension array or multi dimension array --
+                       muliple rows and multiple colums will be there
+
+    int arr[][] = new int[3][3];
+                                       rows cols
+   for(int i=0;i<3;i++) //rows
+   {
+      for(int j=0;j<3;j++) //cols
+      {
+              System.out.print(arr[i][j]);
+       }
+     System.out.println();
+   }
+          
+
+jagged array :
+=================
+
+int arr[][] = new int[2][];
+
+arr[0] = new int[4];
+arr[1] = new int[2];
+
+
+in 2d array, columns will be same for each row.
+
+jagged array --- rows will be constant but column size will be keep changing.
+
+for each loop == this is  made exclusively for iterating through arrays
+
+int arr[] = {10,11,12}
+for(int a : arr)
+{
+   System.out.println(a);
+}
+
+
+// Program to demonstrate 2-D jagged array in Java
+class Main {
+	public static void main(String[] args)
+	{
+		// Declaring 2-D array with 2 rows
+		int arr[][] = new int[2][];
+
+		// Making the above array Jagged
+
+		// First row has 3 columns
+		arr[0] = new int[3];
+
+		// Second row has 2 columns
+		arr[1] = new int[2];
+
+		// Initializing array
+		int count = 0;
+		for (int i = 0; i < arr.length; i++) //rows
+                                                for (int j = 0; j < arr[i].length; j++) //columns
+                                                                              count = count+1;
+				arr[i][j] = count;
+
+		// Displaying the values of 2D Jagged array
+		System.out.println("Contents of 2D Jagged Array");
+
+		for (int i = 0; i < arr.length; i++) {
+			for (int j = 0; j < arr[i].length; j++)
+				System.out.print(arr[i][j] + " ");
+			System.out.println();
+		}
+	}
+}
+
+static keyword :
+-----------------------
+
+It is called as modifier , because it modifies the behaviour of variable , method, Block and class.
+
+By using static keyword, we can create class variables, class methods, static initialisation blocks, and nested top level classes.
+
+   static int a = 10;
+
+    static int abc()
+   {
+    
+    }
+
+  static {
+
+
+   }
+
+Nested top level classes are a one type of inner classes.
+
+
+Why main method is static ???
+
+If it is not static , we need to create object for main method also. 
+since it is static,jvm itself can call the main method when we run the program.
+
+void - returns nothing.
+
+
+  this keyword :
+---------------------
+  It is called as an object reference or reference variable, because it refers    an object.
+
+
+                  A obj = new A();
+
+                  this.abc();
+
+It always refers current object.
+
+ It is implicitly present in instance method, initialisation block and   constructor    iic
+
+program - 1:
+---------------------
+
+   class Demo
+   {
+   int x = 5;
+  void show()
+  {
+   
+    System.out.println(x);}
+   public static void main(String[] args)
+  {
+     Demo d = new Demo(); //1
+     d.show();
+     System.out.println(d.x);
+    
+   }
+}
+
+
+
+Program 2:
+-------------------
+  class Demo
+ {
+   int x = 5;
+   void show()
+   {
+     System.out.println(.x);
+    } public static void main(String[] args)
+  {
+     Demo d = new Demo();
+     d.show();
+    
+   }
+}
+
+Program 
+---------------
+
+class Main
+{
+   int x = 5;
+
+   Main() //constructor
+   {
+	   System.out.println("constructor called");
+	   System.out.println(this.x);
+   }
+   
+   {
+	   System.out.println("initialisation block called");
+	   System.out.println(this.x); //initialisation block
+   }
+   
+   void show() //instance method
+   {
+	   System.out.println("Instance method called");
+	   System.out.println(x);
+   }
+   
+ public static void main(String[] args)
+  {
+     Main d = new Main();
+     d.show();
+    
+   }
+}
+
+ Program - 3:
+---------------------
+  class Main                       //  5 5    8 5   5 8  8 8   error blank
+  {
+   int x = 5;
+  void show()
+  {
+     System.out.println(this.x);  }  
+   public static void main(String[] args)
+  {
+     Main d = new Main(); Main d1 = new Main(); 
+     d.x = d1.x+3;  d.show(); d1.show();
+    
+   }
+}
+
+this keyword explicitly required to access an instance variable 
+                              whenever both instance variable and local variable names are same.
+
+
+program 4:
+--------------
+
+class Main
+{
+   int x = 5;
+    void show() 10 10  5 5 10 5 5 10 error blank
+   {
+    int x = 10;
+    System.out.println(x);
+     System.out.println(this.x);  }  
+    public static void main(String[] args)
+  {
+     Main d = new Main();
+      d.show();
+    
+    
+   }
+}
+
+
+program 5:
+--------------
+class Main
+{
+   int x = 5;
+
+  void show()
+ {
+	  int x = 10;
+	  
+      System.out.println(x); 
+     System.out.println(this.x);
+
+  }  
+ public static void main(String[] args)
+  {
+     Main d = new Main();
+    
+     d.show();
+        
+   }
+}
+
+static method does not refer this keyword in any way(either implicitly or   explicitly).
+ 
+program - 6:
+---------------------
+
+class Main
+{
+   int x = 5;
+   static void show()
+ {
+    System.out.println(x); //this is not applicable here
+  }  
+ public static void main(String[] args)
+  {
+     Main d = new Main();
+     d.show();
+   }
+}
+
+program - 7:
+-----------------------
+class Main
+{
+   int x = 5;
+
+   static void show()
+ {
+
+     System.out.println(this.x); //this is not applicable here
+
+  }  
+ public static void main(String[] args)
+  {
+     Main d = new Main();
+     this.show(); //this is not applicable here 
+   }
+}
+
+program - 8
+---------------------
+
+class Main
+{
+   int x = 5;
+
+   static void show()
+ {
+    int x = 10;
+     
+     System.out.println(x);
+     System.out.println(this.x); //this is not applicable here
+
+  }  
+ public static void main(String[] args)
+  {
+     Main d = new Main();
+     show(); 
+   }
+}
+
+Access Modifiers :
+-------------------------
+
+Access modifiers are also called as access specifiers 
+because they specify access permissions to variables ,methods,classes, interfaces,e.t.c..,
+
+There are 4 access modifiers in java :
+---------------------------------------
+1.private
+2.protected
+3.public
+4.No name(default)(No access modifier)
+
+
+private : (only within the same class i can access )
+--------------
+This access modifier is specified to access only within the class.
+
+
+class A
+{
+   private int a = 10;
+   private int b  = 20;
+
+  private void show()
+  {
+     System.out.println("Welcome");
+   }
+
+   System.out.println(a);
+}
+
+class B
+{
+
+}
+
+Note : we cannot declare a top-level class as private.
+
+  
+public : (i can access anywhere)
+------------
+
+This access modifier has no access restriction means anywhere i can access. ( No restrictive access)
+
+default :(No name or  no access modifier)
+------------
+This access modifier is used to specify access only with in the package.
+
+
+package : in the package we have sub packages, classes and interfaces.
+
+import java.util.Scanner;
+
+import java.util.*;
+
+how to create the package : package packagename;
+
+package abc;
+
+class A
+{
+  int a = 10;
+  int b = 20;
+}
+
+class B
+{
+
+}
+
+interface A
+{
+
+}
+
+interface B
+{
+  int a = 10;
+}
+
+package bcd;
+
+class A
+{
+
+}
+
+class B
+{
+
+}
+
+protected :
+------------------
+
+This access modifier is used to specify access with in package and outside package only subclasses.
+
+package abc;
+
+class A
+{
+   protected int a = 10;
+   int b = 20;
+}
+
+class B
+{
+
+}
+
+
+class C
+
+{
+  int a = 10;
+}
+
+package bcd;
+
+class D extends A
+{
+
+}
+
+class E extends B
+{
+
+} 
+
+Note : we cannot declare a top-level(outside class) class as private or protected. 
+
+No name(default) is a default access modifier in a class.
+
+public is a default access modifier in an interface.
+
+No name(default) is a  default access modifier inside a package.
+
+
+More restrictive access to Less restrictive access  order :
+
+private ---> default ---> protected ----> public
+
+more                                                                    less
+
+
+So, first of all what is a constructor ?
+----------------------------------------------
+
+A constructor is a special method that has same name has that of class name and it is implicitly called when the object is created.
+
+It is also called as special type of method which is used to initialize the object(initialising the instance variables)
+
+
+class Abc
+{
+    Abc()
+    {
+
+   }
+
+}
+
+It calls a default constructor if there is no constructor available in the class by implicit. 
+In such case, Java compiler provides a default constructor by default.
+
+Rules for creating Java constructor :
+------------------------------------------------
+
+There are three rules defined for the constructor :
+
+1.) Constructor name must be the same as its class name                                    
+2.) A Constructor must have no explicit return type(should not have any return type)
+
+3.) A Java constructor cannot be abstract, static, final, and synchronized
+
+Note : The main purpose of constructor is to initialise the instance variables
+
+
+
+class A
+{
+
+    static int a;
+
+   psvm()
+   {
+
+     sysout(a); //0
+
+    }
+}
+
+
+
+int a; //declaration
+
+int a = 10; //initialisation
+
+int a;
+
+a= 10; //assignment
+
+
+The default value for any instance variable is 0
+
+Program 1 :
+   class Demo
+  {
+     char a;
+     int b;
+
+     Demo()
+    {
+        this.a =' ';
+        this.b=0;
+   }
+
+     psvm(String[] args)
+   {
+     Demo d = new Demo(); 
+     Sysout(d.a+" "+d.b);
+   }
+}
+
+Program - 2 :
+class Main
+{
+  int x ;
+   Main()
+   {
+	   int x = 10;
+                    this.x = 0;
+	    System.out.println(x);
+   }
+  public static void main(String[] args)
+  {
+     Main d = new Main();
+     System.out.println(d.x);    
+   }
+}
+
+Program - 3 :
+
+class Demo
+{
+   Demo()
+    {
+        System.out.println("Welcome");
+    }
+ psvm(String[] args)
+ {
+       new Demo()
+       Demo d = new Demo();
+        //d.Demo();    
+  }
+}
+
+
+Note : We cannot call the constructor explicitly.
+    Object creation itself calls the construtor implicitly.
+
+   Types of Java constructors:
+----------------------------------------
+There are two types of constructors in Java:
+
+  1.) Default constructor (no-arg constructor)
+  2.) Parameterized constructor
+
+  Java Default Constructor
+-----------------------------------------
+A constructor is called "Default Constructor" when it doesn't have any parameters or arguments.
+
+Syntax of default constructor:
+---------------------------------------
+
+<class_name>(){}  
+
+Example of default constructor
+----------------------------------------------
+In this example, we are creating the no-arg constructor in the Bike class. 
+It will be invoked(calling or called) at the time of object creation.
+//Java Program to create and call a default constructor  
+
+class Bike1{  
+//creating a default constructor  
+     Bike1(){
+          System.out.println("Bike is created");
+        }  
+//main method  
+         public static void main(String args[]){  
+//calling a default constructor  
+              Bike1 b=new Bike1();  
+}  
+}  
+
+What is the purpose of a default constructor?
+
+  The default constructor is used to provide the default values to the 
+   object like 0, null, etc., depending on the type.(initialising the object)
+
+   2.)Java Parameterized Constructor
+----------------------------------------------
+A constructor which has a specific number of parameters 
+is called a parameterized constructor.
+
+Syntax of parameterised constructor:
+---------------------------------------
+
+<class_name>(args....){}  
+
+Abc(int a, int b)
+{
+
+}
+
+
+Example of parameterized constructor :
+--------------------------------------------------
+In this example, we have created the constructor of Student class 
+that have two parameters. 
+We can have any number of parameters in the constructor.
+
+//Java Program to demonstrate the use of the parameterized constructor.  
+  class Student{  
+    int id;  
+    String name;  
+    //creating a parameterized constructor  
+    Student(int id,String name){  
+       this.id = id;  
+      this.name = name;  
+    }  
+    //method to display the values  
+    void display(){
+           System.out.println(id+" "+name);
+    }  
+   public static void main(String args[]){  
+    //creating objects and passing values 
+     Student s1 = new Student(111,"Karan"); 
+   Student s2 = new Student(112,"Aryan");  
+   //calling method to display the values of object      
+    s1.display();  
+    s2.display();  
+   }  
+}  
+
+
+  If there is no explicit parameterised constructor,
+    compiler implicitly provides default constructor by default.
+   But if there is parameterised constructor explicitly , 
+   compiler does not provides any default constructor implicitly.
+
+Why use the parameterized constructor? providing different values to objects
+
+The parameterized constructor is used to provide different values to distinct objects. 
+However, you can provide the same values also.
+
+Constructor Overloading in Java :
+------------------------------------------
+Constructor overloading in Java is a technique of having more than one constructor with different parameter lists.
+ They are arranged in a way that each constructor performs a different task => initialisation 
+They are differentiated by the compiler by the number of parameters in the list and 
+their types.
+
+overloading : it can same method or constructor name but with different number of parameters or arguments
+
+these parameters or arguments can
+1. differ in number of arguments
+2. in order of arguments
+3. in type of arguments
+
+class A
+{
+       int x; //instance variable
+
+      A(int a) //1
+     {
+
+         this.x = a;
+     }
+
+
+     A(int a, int b,int c) //2
+    {
+        System.out.println(a+b+c);
+
+     }
+
+     A(int a, float b) //3
+     {
+
+      }
+
+
+      A(float a , int b) //4
+      {
+
+
+       }
+
+
+       A() //5
+       {
+
+             this.a = 0;
+
+          }
+
+
+     void b()
+     {
+         System.out.println(this.x);
+     }
+    public static void main(String[] args)
+    {
+        int x = 1000; //local
+
+        A obj = new A(12.8,13);
+        
+          obj.b();
+     }
+}
+
+
+Example of Constructor Overloading :
+--------------------------------------------------
+//Java program to overload constructors  
+class Student5{  
+    int id;  
+    String name;  
+    int age;  
+    //creating two arg constructor  
+    Student5(int i,String n){  
+    id = i;  
+    name = n;  
+   this.age = 0;
+    }  
+    //creating three arg constructor  
+    Student5(int i,String n,int a){  
+    id = i;  
+    name = n;  
+    age=a;  
+    }  
+    void display(){System.out.println(id+" "+name+" "+age);}  
+   
+    public static void main(String args[]){  
+    Student5 s1 = new Student5(111,"Karan");  
+    Student5 s2 = new Student5(222,"Aryan",25);  
+    s1.display();  
+    s2.display();  
+   }  
+}  
+
+class Variable
+{
+	int id;
+	String name;
+	
+	
+	public Variable(int i, String string) {
+		// TODO Auto-generated constructor stub
+		
+		id = i;
+		name = string;
+	}
+	public Variable()
+	{
+		System.out.println("Welcome");
+	}
+	
+	public Variable(String string , int i)
+	{
+		id = i;
+		name = string;
+	}
+	
+	public Variable(String string, int a, int b)
+	{
+		System.out.println("My value1 is "+a+"My value2 is "+b+"My value3 is"+string);
+	}
+	void display()
+	{
+		System.out.println("My roll no is: "+id+" My name is: "+name);
+	}
+	
+	public static void main(String[] args)
+	{
+		Variable obj1 = new Variable(111,"Roshith");
+		
+		Variable obj2 = new Variable("Arya",112);
+		
+		
+		Variable obj3 = new Variable();
+		
+		Variable obj4 = new Variable("Teja sri", 12, 11);
+		
+		obj1.display();
+		obj2.display();
+		
+	}	
+	
+	
+}
+
+class Main
+{
+   int x ;
+   String y;
+   int z;
+   int w;
+   
+    Main()
+    {
+    	System.out.println("Welcome");
+    }
+   
+   
+    Main(int a, String b)
+    {
+    	x=a;
+    	y=b;
+    }
+    
+    Main(String b, int a )
+    {
+    	y = b;
+    	x = a;
+    	
+    }
+    
+    Main(int a, String b , int c)
+    {
+    	x = a;
+    	y= b;
+    	z = c;
+    	
+    }
+    
+    Main(int a, String b, int c,int d)
+    {
+    	x = a;
+    	y= b;
+    	z = c;
+    	w = d;
+    }
+    
+  
+ public static void main(String[] args)
+  {
+     
+    
+     Main d = new Main(2,"Roshith");
+     Main d1 = new Main("Sai",2);
+     Main d2 = new Main(3,"Nani",5);
+     //Main d3 = new Main();
+     Main d4 = new Main(3,"demo",5,4);
+    
+   }
+}
+
+Thats all about constructors from my side.
+
+  this()
+ 
+---> It calls default constructors of current class
+
+  this(args)
+
+--> It calls parameterised constructor of current class.
+
+    Note :
+-----------
+
+  this() or this(args) must be a first statement in a constructor.
+
+
+
+Program - 1:
+--------------------
+
+class Main
+{                 Main()
+	{
+                                    this(5); 
+                   	System.out.println("Welcome");
+	}
+                  Main(int x)
+	{
+                       this();	
+	     System.out.println(x);
+                 
+	}
+              public static void main(String[] args)
+	{ new Main(5);
+                  }
+}
+
+program - 2 :
+---------------
+
+class Main
+{
+	Main()
+	{
+		this(5);
+		System.out.println("Welcome");
+                                      
+	}
+	
+	Main(int x)
+	{
+		
+		System.out.println(x);	
+	}
+	
+	public static void main(String[] args)
+	{
+		new Main();	
+	}
+}
+
+Instance variables initialisation without constructor :
+---------------------------------------------------------------
+
+class Emp
+{
+	int empNo = 101;
+	float salary = 5000.0f;
+}
+
+
+class Main
+{
+	public static void main(String[] args)
+	{
+		Emp e1 = new Emp();
+		Emp e2 = new Emp();
+		
+		System.out.println(e1.empNo+" "+e1.salary);
+		System.out.println(e2.empNo+" "+e2.salary);
+	}
+}
+
+Instance variables initialisation with constructor :
+-----------------------------------------------------------------
+
+class Emp
+{
+	int empNo ;
+	float salary;
+	
+	Emp(int empNo,float salary)
+	{
+		this.empNo = empNo;
+		this.salary = salary;
+	}
+}
+
+
+class Main
+{
+	public static void main(String[] args)
+	{
+		Emp e1 = new Emp(101,5000.0f);
+		Emp e2 = new Emp(102,10000.0f);
+		Emp e3 = new Emp(103,15000.0f);
+		Emp e4 = new Emp(104,5000.0f);
+		
+		System.out.println(e1.empNo+" "+e1.salary);
+		System.out.println(e2.empNo+" "+e2.salary);
+		System.out.println(e3.empNo+" "+e3.salary);
+		System.out.println(e4.empNo+" "+e4.salary);
+	}
+} 
+
+Final Keyword:
+--------------------------
+
+It is called as modifier and it modifies the behaviour of variable, method and class.
+
+By using final keyword, we can prevent value of the variable, method overriding and inheritance.
+
+program - 1:
+
+final class A
+{
+	int a  = 10;
+	int b = 10;
+}
+
+
+
+
+class B 
+{
+	public static void main(String[] args)
+	{
+		final int x = 5;
+	                  x = 9;
+		System.out.println(x);
+	}
+}
+
+Program - 2:
+---------------------
+
+class Main
+{
+	public static void main(String[] args)
+	{
+		final int x=5;
+	                   x = x+3;
+		System.out.println(x);
+	}
+}
+
+final keyword can be applied to instance variables, class variables and local variables.
+
+Note :
+-----------
+
+Final variables must be initialized otherwise compile time error occurs.
+
+
+class Main
+{
+	public static void main(String[] args)
+	{
+		final int x;
+
+             
+                               {
+                                   x =5; //initialisation
+                                }
+                                
+
+	     x = x+3;
+		System.out.println(x);
+	}
+}
+
+======================================================
+What is OOPs ?
+==================
+
+Procedural programming is about writing procedures or methods that perform operations on the data, while object-oriented programming is about creating objects that contain both data and methods.
+
+Object-oriented programming has several advantages over procedural programming:
+
+OOP is faster and easier to execute
+OOP provides a clear structure for the programs
+OOP helps to keep the Java code DRY "Don't Repeat Yourself", and makes the code easier to maintain, modify and debug
+OOP makes it possible to create full reusable applications with less code and shorter development time
+
+
+ The "Don't Repeat Yourself" (DRY) principle is about reducing the repetition of code. You should extract out the codes that are common for the application, and place them at a single place and reuse them instead of repeating it.
+
+
+
+What is a object-oriented programming language ?
+
+A language that supports object oriented programming principles is nothing but a object oriented programming language.
+
+Object-oriented Principles :
+=====================
+
+1. Inheritance
+
+2. Polymorphism
+
+3. Abstarction
+
+4. Encapsulation
+
+
+   Inheritance :
+  ---------------------
+  Creating a new class(with already existed properties along with new properties)
+ from the existing class is called as inheritance.
+
+In Inheritance, existed class is called super class or parent class
+ and new class is called sub class or child class.
+
+Adding new functionality to the already existed application is the use of inheritance.
+
+using extends keyword we can acquire the properties from one class to another class.
+
+
+
+class CollegeApp1.0
+{
+  int sRollno;
+  String sName;
+  String sAddress;
+  int sPhoneno;
+}
+
+class CollegeApp2.0 extends CollegeApp1.0
+{
+
+   String sEmailId;
+}
+
+
+
+
+There are types of inheritance in java :
+---------------------------------------------
+
+1.Single Inheritance
+
+2.Multiple inheritance
+
+3.Multilevel inheritance
+
+4.Heirarchical Inheritance
+
+5.Multipath inheitance
+
+6.Hybrid inheriance
+
+
+1.Single Inheritance
+-----------------------------
+
+Derivation of a class from only one super class is called as single inheritance.
+
+ class A
+{
+
+   -----
+}
+
+  class B extends A
+{
+  -------
+}
+
+2.Muliple inheritance :
+-----------------------------
+
+Derivation of a class from more than one super class is called as multiple inheritance.
+
+  class A
+  {
+
+  }
+
+  class B
+ {
+
+  }
+
+  class C extends A,B
+  {
+
+  }
+
+3.Multilevel inheritance:
+--------------------------------
+
+Derivation of a class from subclass is called as multilevel inheritance.
+
+    class A 
+{
+
+}
+  class B extends A
+{
+
+}
+
+  class C extends B
+{
+
+}
+
+  class D extends C
+{
+
+}
+ 
+4.Heirarchical inheritance:
+-----------------------------------
+
+Derivation of several classes from only one super class 
+                                                                    is called as heirarchical inheritance.
+
+  class A
+  {
+
+  }
+
+  class B extends A
+{
+
+}
+
+  class C extends A
+{
+
+}
+
+  class D extends A
+{
+
+}
+
+5.Multipath inheritance :(Multiple inheritance + Heirarchical inheritance)
+--------------------------------
+
+Derivation of a class from more than one sub class,
+ those subclasses get inherited from the same super class is called as multipath inheritance.
+
+  class A 
+{
+
+}
+
+  class B extends A
+{
+
+}
+
+  class C extends A
+{
+
+
+}
+
+  class D extends B,C
+{
+
+}
+
+6.Hybrid inheritance
+--------------------------
+
+Derivation of a class, involving more than one form of inheritance is called as hybrid inheriatnce.
+
+Class A
+{
+
+}
+
+class B extends A
+{
+
+}
+
+class C
+{
+
+}
+
+  class D extends B,C
+{
+
+}
+
+Note :
+------------
+
+  Multipath inheritance is also one example of hybrid inheritance.
+
+  Java does not support multiple inheritance, multipath inheritance and hybrid inheritance.
+
+Note2 :
+--------------
+
+    Java does not support multiple inheritance because of ambiguity to call.
+
+  class A
+  {
+
+    show();
+  }
+
+   class B
+  {
+   show();
+  }
+  class C extends A,B
+{
+
+
+      C obj = new C();
+      obj.show();
+
+
+}
+
+
+Note :
+
+   Super class reference can refer both super class object and sub class class object, but it can access only super class members only.
+
+        A obj1 = ____________; (new A() or new B())
+
+class A //super class
+{
+	int x = 10;
+	void show()
+	{
+		System.out.println("Class A");
+	}
+}
+
+class B extends A
+{
+	int y = 11;
+	void print()
+	{
+		System.out.println("Class B");
+		
+	}
+	
+	public static void main(String[] args)
+	{
+		B obj = new B();
+		
+		System.out.println(obj.x);
+		System.out.println(obj.y); //Not valid
+		obj.show();
+		obj.print(); //Not Valid
+		
+				
+	}
+}
+
+Sub class reference can refer only subclass object 
+but it can access both super class and sub class members.
+
+      B obj1 = new B();
+
+
+Example program for notes below :
+-----------------------------------------
+
+class A //super class
+{
+	int x = 10;
+	void show()
+	{
+		System.out.println("Class A");
+	}
+}
+
+class B extends A
+{
+	int y = 11;
+	void print()
+	{
+		System.out.println("Class B");
+		
+	}
+	
+	public static void main(String[] args)
+	{
+		B obj = new B();
+		
+		System.out.println(obj.x);
+		System.out.println(obj.y);
+		obj.show();
+		obj.print();
+		
+				
+	}
+}
+
+
+
+this -> obj ref  IIC => instance method, initialisation block and constructor, when i wanted to access instance variable or method of current class or same class
+
+Super keyword :
+-------------------
+
+It is also called as object reference or reference variable because it refers super class memory.
+
+  Super keyword explicitly required to access super class member whenever, 
+ both super class member and sub class member names are same.
+
+Member can be variable or method.
+
+class A
+{
+
+                   A()
+                 {
+                    }
+	int x = 10;
+	
+	void show()
+	{
+		System.out.println("Welcome");
+	}
+                  void give()
+                  {
+                        }
+}
+
+class Main extends A
+{
+	int x = 20;
+
+              Main()
+              {
+                    super();
+              }
+                 void abc()
+                 {
+                      }
+	
+	void print()
+	{
+		int x = 30;
+		System.out.println(x);
+		System.out.println(this.x);
+		System.out.println(super.x);
+		super.show();
+                                   this.abc();
+                                   super.give();
+	}
+	
+	public static void main(String[] args)
+	{
+		Main obj = new Main();
+		obj.print();
+
+		
+	}
+}
+
+Note :
+----------
+static method does not refer this and super keywords in anyways.
+
+super():
+--------------
+It calls default constructor of super class.
+
+It is implicitly present as a first statement in every constructor.
+
+
+super(args)
+----------------
+
+It calls parameterised constructor of super class.
+
+Note :
+-----------
+
+this() , or this(args) or super() or super(args) must  be a first statement in a constructor.
+
+program - 1
+--------------------
+
+class A
+{
+	A()
+	{
+		System.out.println("A class");
+	}
+}
+
+class Main extends A
+{
+	Main()
+	{
+                                    
+		System.out.println("Main class");
+	}
+	
+	public static void main(String[] args)
+	{
+		new Main();
+	}
+}
+
+Program - 2:
+-------------------
+
+class A
+{
+	A()
+	{
+		System.out.println("welcome");
+	}
+	A(int x)
+	{
+		this();
+		System.out.println(x);
+	}
+}
+
+class Main extends A
+{
+	Main(int y)
+	{
+	    super(20);
+	    System.out.println(y);
+	}
+	
+	public static void main(String[] args)
+	{
+		new Main(10);
+	}
+}
+
+Polymorphism :
+-------------------------
+
+The ability to take more than one form is called as polymorphism.
+
+Poly means "many", morphism means forms and polymorphism means many forms.
+
+There are two types of polymorphism in java :
+-------------------------------------------------------
+
+1.) Compile-time polymorphism
+
+2.) Run-time polymorphism
+
+
+1. Compile - time polymorphism :
+----------------------------------------
+
+Binding of method call statement with method definition is done at compile time is known as compile time polymorphism.
+
+Example of compile time polymorphism is : Method Overloading.
+
+Method Overloading :
+--------------------------
+
+If two or more methods with the same name and with different parameters list, then it is said to method overloading. 
+
+void A()
+{
+
+}
+void A(int a, int b, int c)
+{
+
+
+}
+
+void A(int a, int b)
+{
+
+}
+
+void A(int a, float b)
+{
+
+
+}
+
+int A(float a, int b)
+{
+
+}
+
+main()
+
+{
+
+  A();
+}
+In method overloading, parameters can be different in number of arguments , datatypes and order of arguments.
+
+In method overloading, return type can same or different.
+
+Program - 1:
+------------------
+class Main
+{
+	void add(int a, int b)
+	{
+		System.out.println(a+b);
+	}
+	
+	private void add(int b, int a, int c)
+	{
+		System.out.println(a+b+c);
+	}
+	public static void main(String[] args)
+	{
+                     Main obj = new Main();
+                      obj.add(35,23,13); //method call statement
+                      obj.add(12, 15);			
+	}
+}
+
+2.)Runtime Polymorphism :
+---------------------------------
+Binding of method call Statement with method definition is done at runtime(execution) is called as runtime polymorphism.
+
+The example of runtime polymorphism is Method Overriding
+
+Method Overriding :
+----------------------------
+
+If two or more methods with the same name and with same parameters list, then it is said to be method overriding.
+
+Note :
+======
+**Methods cannot be overridden in the same class.
+
+Methods can be overridden only with inheritance.
+
+Program - 1:
+--------------------
+class A
+{
+	void show()
+	{
+		System.out.println("A class");
+	}
+	
+                	void print()
+	{
+		System.out.println("print() method");
+	}
+}
+
+
+class Main extends A
+{
+	void show()
+	{
+		System.out.println("Main class");
+	}
+	
+	void display()
+	{
+		System.out.println("display() method");
+	}
+	
+	public static void main(String[] args)
+	{
+		A obj = new Main();
+		obj.show();
+		obj.print();
+		//obj.display();
+		
+	}
+}
+
+Program - 2:
+-------------------
+class A
+{
+	void show()
+	{
+		System.out.println("A class");
+	}
+	
+	void print()
+	{
+		System.out.println("print() method");
+	}
+}
+
+
+class Main extends A
+{
+	void show()
+	{
+		System.out.println("Main class");
+	}
+	
+	void display()
+	{
+		System.out.println("display() method");
+	}
+	
+	public static void main(String[] args)
+	{
+	   Main obj = new Main();
+		obj.show();
+		obj.print();
+		obj.display();
+		
+	}
+}
+
+Program - 3:
+--------------------
+class A
+{
+	private void show()
+	{
+		System.out.println("A class");
+	}
+	
+	void print()
+	{
+		System.out.println("print() method");
+	}
+}
+
+
+class Main extends A
+{
+	  void show()
+	{
+		System.out.println("Main class");
+	}
+	
+	void display()
+	{
+		System.out.println("display() method");
+	}
+	
+	public static void main(String[] args)
+	{
+	   Main obj = new Main();
+		obj.show();
+		obj.print();
+		//obj.display();
+		
+	}
+}
+
+Assignment 3 : Perform method overriding with parameters 
+Self learning-1 : Can I perform inheritance for a static or class method ? Why static methods cannot be overridden ?
+Self learning-2 : Can private methods be inherited ?
+
+
+Differences between Method Overloading and Method Overriding :
+------------------------------------------------------------------------------
+Method Overloading                                         Method Overriding
+-----------------------------------------------------------------------------------
+1. If two or more methods with same name and with different parameters list .Then it is said to be method overloading
+
+1. If two or more methods with same name and with same parameters list .Then it is said to be method overriding
+
+2.In method overloading, return type can be same or different.
+
+2.In method overriding , return type must be same,except covariant return type.
+
+3.Methods can be overloaded in the same class
+
+3.Methods cannot be overrided in the same class because of ambiguity to call
+
+4.Method can be overloaded in inheritance also
+
+4. Methods can be overridded only in inheritance.
+
+5.Final methods can be overloaded.
+
+final void A(int a, int b)
+
+final void A(float a, float b)
+
+5.Final methods cannot be overridden because final keyword used to prevent method overriding.
+
+6.Static methods can be overloaded
+
+6. Static methods cannot be overridden because static methods are not a part of an object. 
+
+7.In method overloading, Access modifiers can be same or different.
+
+7. In method overridding, method must have same access modifier or less restrictive access modifier.
+
+private -> default -> protected -> public
+more                                                    less
+
+class A
+{
+   void abc(int a, int b)
+  {
+
+  }
+}
+
+
+class B extends A
+{
+  protected void abc(int a, int b)
+   {
+
+
+    }
+}
+
+8.Private methods can be overloaded.
+
+8.Private methods cannot be overridden because private members cannot be inherited(because scope is within the class only).
+
+Co-variant return type :
+-------------------------------
+
+Java permits sub class type as a return type while overriding a method. This is covariant return type.
+
+Class A
+{
+
+}
+class B extends A
+{
+
+}
+
+class C extends B
+{
+     B hello()
+    {
+
+    }
+}
+
+class D extends C
+{
+   C hello()
+  {
+    
+   }
+}
+
+class E extends D
+{
+    D hello()
+    {
+
+     }
+}
+
+
+
+
+   
+
+
+
+
+
+
+
+
+
