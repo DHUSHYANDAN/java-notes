@@ -1,0 +1,1583 @@
+Exception Handling
+----------------------------
+
+A programming mistake is called as error.  
+
+There are 3 types of errors in java :
+
+
+1.Compile-time errors or syntatical errors or syntax errors
+2.Runtime errors
+3.Logical errors
+
+1.Compile-time errors or synatatical error ==> Syntax errors.
+----------------------------------------------------
+
+(this is responsibility of user or programmer and also system to take care of these errors)
+
+2. Runtime Errors :      
+------------------------
+
+In C/C++ , if runtime error occurs sometimes it shows, but all the times it will hang or compiler stops.
+
+But in Java , that is not like that because in java to handle runtime errors we have a feature called Exception handling.  =>S.O.P(1/0); //runtime error.
+
+Exception itself is called Runtime Error.
+
+3.Logical Errors : 
+--------------------------
+
+Program successfully compiled and executed but getting wrong output since there is a mistake in logic is called as logical error.
+
+The compiler or system cannot understand the logic....
+That is programmers logic so it should be corrected by programmer only.
+
+
+To handle Runtime Errors , Exception handling is needed.
+
+All Exceptions, are not handled automatically By System.
+
+Note : All Exceptions are classes in Java .
+
+class ArrayIndexOutOfBoundsException
+{
+
+}
+
+When Runtime error occurs, object of that specific exception class is being created by the jvm.
+
+Advantages of Exception Handling :
+------------------------------------------
+The core advantage of exception handling is to maintain the normal flow of the application.
+ An exception normally disrupts the normal flow of the application; 
+that is why we need to handle exceptions. Let's consider a scenario:
+
+statement 1;  
+statement 2;  
+statement 3;  
+statement 4;  
+statement 5;//exception occurs checked exception(It disrupts the normal flow of the application)
+statement 6;  
+statement 7;  
+statement 8;  
+statement 9;  
+statement 10;  
+
+Suppose there are 10 statements in a Java program and an exception occurs at statement 5; 
+the rest of the code will not be executed, i.e., statements 6 to 10 will not be executed. 
+However, when we perform exception handling, the rest of the statements will be executed. 
+That is why we use exception handling in Java.
+
+Need of Exception Handling :
+----------------------------------
+
+To maintain normal flow execution of an application or to handle runtime errors.
+
+So, What is Exception Handling :
+==========================
+
+Exception handling is a mechanism of handling runtime errors, to maintain the normal flow of execution of an application.
+
+What is Exception ? 
+=================
+
+In Java, an exception is an event that disrupts the normal flow of the program. It is an object which is thrown at runtime.
+                                                                                    (or)
+Exception is also called as a runtime error.
+
+There are three types of exceptions :
+
+1.Checked exception
+2.Unchecked exception
+3.error
+
+
+
+1.Checked Exceptions : (Compile-time exceptions)
+-----------------------------------
+
+The Exception classes that are derived from java.lang.Exception class 
+are called as checked Exceptions.
+
+class ClassNotFoundException extends Exception 
+{
+
+}
+
+Checked exceptions are checked at compile-time.
+
+Checked Exceptions do not include java.lang.RuntimeException class and all its subclasses.
+
+All checked exceptions must be handled by programmer explicitly otherwise compile-time error occurs.
+
+  Example : 
+       ClassNotFoundException :ClassNotFoundException is a checked   exception in Java that occurs when the JVM  tries to load a particular class but does not find it in the classpath.
+
+                    IOException : the base class for exceptions thrown while                                             accessing information using streams, files                                                and directories.
+ 
+                     SQLException:  An exception that provides information                                                  on a database access error or other errors.
+
+2.Unchecked Exceptions : (Runtime Exceptions)
+-----------------------------------
+
+ The exception classes that are derived from java.lang.RuntimeException class are called as unchecked exceptions.
+
+ Unchecked exceptions are not checked at compile-time, but they are checked at runtime.
+
+  All uncehecked are handled by system implicitly.(Programmer no need to handle). 
+
+1/0 => arithmetic exception
+           denominator should not be zero
+
+   Unchecked exceptions are handled by programmer to display user friendly error messages.
+ 
+Example : NullPointerException, ArrayIndexOutOfBoundsException and IllegalArgumentException.
+
+     Addition ad = new Addition();
+     ad = null;
+     ad.add();
+     
+
+3) System Error
+
+Error is irrecoverable. Some example of errors are OutOfMemoryError, VirtualMachineError, 
+AssertionError etc.
+
+Exception Class Heirarchy
+-----------------------------------
+
+ The java.lang.Throwable class is the root class of Java Exception hierarchy inherited by two subclasses: Exception and Error. The hierarchy of Java Exception classes is given below:
+
+  show the image(search for the image in google by typing exception class heirarchy)
+
+ Throwable : It is the root class or super class of Java Exception hierarchy
+
+ Object class is the parent class of all the classes in java by default.
+
+ java.lang package is a default package in Java, which means that it is automatically imported into all Java programs.  As a result, you can use the classes and interfaces in this package without explicitly importing them.
+
+-> The lang package in Java provides classes and interfaces that are fundamental to the design of the Java programming language. It is a built-in package provided by the JDK (Java Development Kit).
+
+Common Scenarios of Java Exceptions
+
+There are given some scenarios where unchecked exceptions may occur. They are as follows:
+
+1) A scenario where ArithmeticException occurs
+=====================================
+If we divide any number by zero, there occurs an ArithmeticException. 1/0
+
+int a=50/0;//ArithmeticException  
+
+2) A scenario where NullPointerException occurs
+======================================
+If we have a null value in any variable, 
+ performing any operation on the variable throws a NullPointerException.
+
+String s=null;  
+System.out.println(s.length());//NullPointerException  
+
+3) A scenario where NumberFormatException occurs
+=====================================
+
+If the formatting of any variable or number is mismatched, it may result into NumberFormatException. 
+Suppose we have a string variable that has characters; converting this variable into digit will cause NumberFormatException.
+
+String s="abc";  
+int i=Integer.parseInt(s);//NumberFormatException  
+
+4) A scenario where ArrayIndexOutOfBoundsException occurs
+============================================
+
+When an array exceeds to it's size, the ArrayIndexOutOfBoundsException occurs.
+ there may be other reasons to occur ArrayIndexOutOfBoundsException. Consider the following statements.
+
+int a[]=new int[5];  
+a[10]=50; //ArrayIndexOutOfBoundsException  
+
+How to handle the exceptions :
+
+The following keywords are used in Exception handling :
+
+1.try
+
+2.catch
+
+3. throw
+
+4.throws
+
+5.Finally
+
+
+
+1.try-catch :
+-----------------------
+
+try - block :
+-----------------
+Java try block is used to enclose the code that might throw an exception. 
+
+Note : It must be used within the method.
+
+If an exception occurs at the particular statement in the try block, 
+the rest of the block code will not execute. 
+So, it is recommended not to keep the code in try block that will not throw an exception.
+
+
+try
+{
+  statement1
+  Statement2 //exception is generated ArrayIndexOutOfBounds
+  Statement3
+}
+catch(Exception e) //most general exception
+{
+
+}
+
+
+
+Compulsory Note :
+=================
+Java try block must be followed by either catch or finally block.
+
+
+try-catch :
+--------------
+
+The try keyword creates a try...catch statement.
+
+The try statement allows you to define a block of code to be tested for exceptions while it is being executed.
+
+The catch statement allows you to define a block of code to be executed, if an error occurs in the try block.
+
+
+ try - testing or throwing.
+
+ catch - handling the exception that has occured.
+
+
+try-catch Syntax :
+------------
+try{    
+//code that may throw an exception 
+System.out.println("welcome");
+ int a = 1/0;
+System.out.println("hello");
+
+catch(ArithmeticException ref){
+    System.out.println(ref);
+}    
+
+
+
+A obj = new A();
+
+try- finally syntax :
+-----------------------
+
+try{    
+//code that may throw an exception    
+}
+finally
+{
+
+}   
+
+
+catch block 
+---------------
+The catch block is used to handle the Exception by declaring the type of exception within the parameter.
+ The declared exception must be the parent class exception ( i.e., Exception) 
+or the generated exception type. 
+
+However, the good approach is to declare the generated type of exception.
+
+Example code-1 :
+===============
+
+public class TryCatchExample {  
+  
+    public static void main(String[] args) {  
+        try  
+        {  
+        int data=50/0; //may throw exception   
+                         // if exception occurs, the remaining statement will not exceute  
+        System.out.println("rest of the code");  
+        }  
+             // handling the exception   
+        catch(ArithmeticException e)  
+        {  
+            System.out.println(e); 
+
+             e.printStackTrace(); 
+        }  
+          
+    }  
+      
+}
+
+Example code-2 :
+==============
+
+public class TryCatchExample2 {  
+  
+    public static void main(String[] args) {  
+        try  
+        {  
+        int data=50/0; //may throw exception   
+        }  
+             // handling the exception  
+        catch(Exception e)  
+        {  
+                  // displaying the custom message  
+            System.out.println("Can't divided by zero");  
+        }  
+    }  
+      
+}  
+
+Example code-3 :
+===============
+
+public class TryCatchExample3 {  
+  
+    public static void main(String[] args) {  
+        int i=50;  
+        int j=0;  
+        int data;  
+        try  
+        {  
+        data=i/j; //may throw exception   
+        }  
+            // handling the exception  
+        catch(Exception e)  
+        {  
+             // resolving the exception in catch block  
+            System.out.println(i/(j+2));  
+        }  
+    }  
+}    
+
+Note :
+=====
+
+The catch block must be used after the try block only. 
+You can use multiple catch block with a single try block.
+
+
+
+try
+{
+
+}
+catch(Arithmetic ae)
+{
+
+}
+
+catch(NullPointerException ne)
+{
+
+}
+
+
+
+Working of try-catch block:
+---------------------------------
+
+
+
+The JVM firstly checks whether the exception is handled or not. If exception is not handled, 
+JVM provides a default exception handler that performs the following tasks:
+
+Prints out exception description.
+Prints the stack trace (Hierarchy of methods where the exception occurred).
+Causes the program to terminate.
+
+
+But if the application programmer handles the exception, 
+the normal flow of the application is maintained, i.e., rest of the code is executed.
+
+Program using try with multi-catch block :
+-----------------------------------------
+
+class Demo
+{
+         public static void main(String args[])
+         {
+                 try{
+                 int x=Integer.parseInt(args[0]);
+                 int y=Integer.parseInt(args[1]);
+                 int z=x/y;
+                 System.out.println(z);
+                 }
+ 
+             catch(ArrayIndexOutOfBoundsException ae)
+                 {
+        System.err.println(“Please pass two arguments”);
+                 }
+       catch(NumberFormatException ne)
+       {
+         System.err.println(“Please pass two numbers only”);
+       }
+         catch(ArithmeticException ae)
+     {
+         System.err.println(“Please pass second argument except zero”);
+       }
+     catch(Exception e)
+    {
+       System.err.println("some other errror has occured");
+    
+     }
+   
+}
+}
+
+
+Java Catch Multiple Exceptions
+-------------------------------------------
+Java Multi-catch block
+----------------------------------
+
+A try block can be followed by one or more catch blocks. 
+Each catch block must contain a different exception handler. 
+So, if you have to perform different tasks at the occurrence of different exceptions, 
+use java multi-catch block.
+
+Rules :
+--------------
+
+
+At a time only one exception occurs and at a time only one catch block is executed.
+
+All catch blocks must be ordered from most specific to most general, 
+i.e. catch for ArithmeticException must come before catch for Exception.
+
+Example-1 :
+============
+public class MultipleCatchBlock {  
+  
+    public static void main(String[] args) {  
+          
+           try{    
+                int a[]=new int[5];    
+                a[5]=30/0;    
+                System.out.println(a[10]);  
+               }    
+               catch(ArithmeticException e)  
+                  {  
+                   System.out.println("Arithmetic Exception occurs");  
+                  }    
+               catch(ArrayIndexOutOfBoundsException e)  
+                  {  
+                   System.out.println("ArrayIndexOutOfBounds Exception occurs");  }    
+               catch(Exception e)  
+                  {  
+                   System.out.println("Parent Exception occurs");  
+                  }             
+               System.out.println("rest of the code");    
+    }  
+}
+
+Example-2 :
+==================
+class Variable
+{
+	public static void main(String[] args)
+	{
+		int arr[] = new int[5];
+		try
+		{
+			arr[10] = 1/0;
+		}
+		catch(ArithmeticException ae)
+		{
+			System.out.println("Arithmetic exception has occured");
+		}
+		catch(ArrayIndexOutOfBoundsException ai)
+		{
+			System.out.println("array index exception has occured");
+		}
+		
+	}
+}
+
+Example -3 :
+===============
+class MultipleCatchBlock{    
+  public static void main(String args[]){    
+   try{    
+    int a[]=new int[5];    
+    a[5]=30/0;    
+   }    
+   catch(Exception e){System.out.println("common task completed");}    
+   catch(ArithmeticException e){System.out.println("task1 is completed");}    
+   catch(ArrayIndexOutOfBoundsException e){System.out.println("task 2 completed");}    
+   System.out.println("rest of the code...");    
+ }    
+}   
+
+
+// A Java program to demonstrate that we needed
+// multiple catch blocks for multiple exceptions
+// prior to Java 7
+
+import java.util.Scanner;
+public class Test
+{
+	public static void main(String args[])
+	{
+		Scanner scn = new Scanner(System.in);
+		try
+		{
+			int n = Integer.parseInt(scn.nextLine());
+		
+			if (99%n == 0)
+				System.out.println(n + " is a factor of 99");
+		}
+		catch (ArithmeticException ex )
+		{
+			System.out.println("Arithmetic " + ex);
+		}
+		catch (NumberFormatException ex )
+		{
+			System.out.println("Number Format Exception " + ex);
+		}
+	}
+}
+
+Starting from Java 7.0, it is possible for a single catch block 
+to catch multiple exceptions by separating each with | (pipe symbol) in the catch block.
+
+Catching multiple exceptions in a single catch block reduces code duplication and increases efficiency. The bytecode generated while compiling this program will be smaller than the program having multiple catch blocks as there is no code redundancy.
+
+Syntax:
+
+try {  
+    // code
+} 
+catch (ExceptionType1 | Exceptiontype2 ex){   
+    // catch block
+}
+
+
+// A Java program to demonstrate
+// multicatch feature
+
+import java.util.Scanner;
+
+public class Test
+{
+	public static void main(String args[])
+	{
+		Scanner scn = new Scanner(System.in);
+		try
+		{
+			int n = Integer.parseInt(scn.nextLine());
+			if (99%n == 0)
+				System.out.println(n + " is a factor of 99");
+		}
+		catch (NumberFormatException | ArithmeticException ex)
+		{
+			System.out.println("Exception encountered " + ex);
+		}
+	}
+}
+
+
+
+
+throw keyword :
+-------------------------
+
+The throw keyword is used to create a custom error.
+
+It is used to explicitly throw an exception ourselves.
+
+The throw statement is used together with an exception type. There are many exception types available in Java: ArithmeticException, ClassNotFoundException, ArrayIndexOutOfBoundsException, SecurityException, etc.
+
+If in an application, if i wanted to throw an exception explicitly according to my need.
+
+The exception type is often used together with a custom method, like in the example below:
+
+1/0 =>arithmetic exception
+
+public class Main {
+  static void checkAge(int age) { 
+    if (age < 18) { 1/0
+      throw new ArithmeticException("Access denied - You must be at least 18 years old."); 
+    } else {
+      System.out.println("Access granted - You are old enough!"); 
+    }
+ } 
+ 
+ public static void main(String[] args) { 
+   checkAge(15); 
+ } 
+}
+
+prcatice :
+=========
+
+class ThrowExcep {
+    static void fun()
+    {
+        try {
+            throw new NullPointerException("demo");
+        }
+        catch (NullPointerException e) {
+            System.out.println("Caught inside fun().");
+            throw e; // rethrowing the exception
+        }
+    }
+ 
+    public static void main(String args[])
+    {
+        try {
+            fun();
+        }
+        catch (NullPointerException e) {
+            System.out.println("Caught in main.");
+        }
+    }
+}
+
+throws keyword :
+------------------------
+
+The throws keyword indicates what exception type may be thrown by a method.
+
+There are many exception types available in Java: ArithmeticException, ClassNotFoundException, ArrayIndexOutOfBoundsException, SecurityException, etc.
+
+throws is a keyword in Java that is used in the signature of a method to indicate that this method might throw one of the listed type exceptions. 
+
+The caller to these methods has to handle the exception using a try-catch block. 
+
+In a program, if there is a chance of raising an exception then the compiler always warns us about it and compulsorily we should handle that checked exception, Otherwise, we will get compile time error saying unreported exception XXX must be caught or declared to be thrown.
+
+ To prevent this compile time error we can handle the exception in two ways: 
+
+By using try catch
+By using the throws keyword
+
+We can use the throws keyword to delegate the responsibility of exception handling to the caller (It may be a method or JVM) then the caller method is responsible to handle that exception.  
+
+class tst {
+    public static void main(String[] args)
+    {
+        Thread.sleep(10000);
+        System.out.println("Hello Geeks");
+    }
+}
+Output
+
+error: unreported exception InterruptedException; must be caught or declared to be thrown
+
+other way to solve this :
+===============
+
+class tst {
+    public static void main(String[] args)
+        throws InterruptedException
+    {
+        Thread.sleep(10000);
+        System.out.println("Hello Geeks");
+    }
+}
+Output
+
+Hello Geeks
+
+
+Program : 
+----------------
+public class Main {
+  static void checkAge(int age) throws SQLException{
+    if (age < 18) {
+      throw new ArithmeticException("Access denied - You must be at least 18 years old.");
+    }
+    else {
+      System.out.println("Access granted - You are old enough!");
+    }
+  }
+
+  public static void main(String[] args) throws SQLException {
+    checkAge(15); // Set age to 15 (which is below 18...)
+  }
+}
+
+Important Points to Remember about throws Keyword
+=======================================
+
+throws keyword is required only for checked exceptions and usage of the throws keyword for unchecked exceptions is meaningless.
+
+throws keyword is required only to convince the compiler and usage of the throws keyword does not prevent abnormal termination of the program.
+
+With the help of the throws keyword, we can provide information to the caller of the method about the exception.
+
+Key Differences between throw and throws :
+-------------------------------------------------
+1.throw Keyword explicitly throws an exception whereas throws keyword is used to declare an exception.
+
+2.throw keyword is used within the method whereas, throws is used along method signature.
+
+3.you cannot throw multiple exceptions whereas, you can declare multiple exceptions.
+
+
+
+
+finally keyword :
+----------------------------
+
+The finally keyword is used to execute code (used with exceptions - try..catch statements) 
+no matter if there is an exception or not.
+
+Either the exception has occured or not, finally block will execute for sure
+
+
+
+try {
+  int[] myNumbers = {1, 2, 3};
+  System.out.println(myNumbers[7]);
+} catch (Exception e) {
+  System.out.println("Something went wrong.");
+} 
+finally
+{
+
+  System.out.println("The 'try catch' is finished.");
+}
+
+What is the use of Finally Block ?
+==========================
+It is used to perform cleanup activities.
+
+Cleanup activities are nothing but closing a file, closing a database connection,
+ closing a network socket etc..,
+
+
+Finally block is executed always.
+
+Java Object finalize() Method
+=====================
+
+Finalize() is the method of Object class. 
+
+This method is called just before an object is garbage collected. finalize() method overrides to dispose system resources, perform clean-up activities and minimize memory leaks.
+
+Syntax
+=======
+protected void finalize() throws Throwable  
+
+Example code :
+============
+
+public class JavafinalizeExample1 {  
+     public static void main(String[] args)   
+    {   
+        JavafinalizeExample1 obj = new JavafinalizeExample1();   
+        System.out.println(obj.hashCode());   
+        obj = null;   
+        // calling garbage collector    
+        System.gc();   
+        System.out.println("end of garbage collection");   
+  
+    }   
+    @Override  
+    protected void finalize()   
+    {   
+        System.out.println("finalize method called");   
+    }   
+}  
+
+Output :
+
+2018699554
+end of garbage collection 
+finalize method called
+
+Difference between final and finally keywords :
+=================================
+
+=> The final keyword is used to prevent the value of the variable, method and class whereas,
+
+finally block is used to perform cleanup activities and it is exceuted always.
+
+
+
+
+
+Creating a user defined exception in  java :(Custom Exceptions)
+---------------------------------------------------------------------------
+
+Java provides us the facility to create our own exceptions which are basically derived classes of Exception. 
+
+Creating our own Exception is known as a custom exception or user-defined exception. 
+
+Basically, Java custom exceptions are used to customize the exception according to user needs. 
+
+In simple words, we can say that a User-Defined Exception or custom exception
+ is creating your own exception class and throwing that exception using the ‘throw’ keyword.
+
+
+
+class PetersException extends Exception
+{
+
+     static void myName() throws PetersException 
+    {
+
+        throw new PetersException("This is generated");
+
+      }
+   psvm(String[] args) throws PetersException
+   {
+
+      myName();
+    }
+
+}
+
+
+      Runtime error examples :
+=========================
+
+Example -1 :
+==========
+
+     public class LaunchExcep1 {
+	
+	
+	public static void main(String[] args) {
+		
+		System.out.println("creating array !!!!");
+		
+		int arr[] = new int[555555555555]; //array size is fixed
+		                        //same type
+		                     //it demands contiguous memory locations
+		
+		System.out.println("array creation is done.");
+
+	}
+
+}
+
+
+Example - 2 :
+=============
+
+public class LaunchExcep1 {
+
+     static void abc()
+	{
+		abc();
+	}
+	
+	
+	
+	public static void main(String[] args) {
+		// TODO Auto-generated method stub
+		System.out.println("calling");
+		abc();
+        System.out.println("execution done");
+	}
+
+}
+
+Exception Example 
+================
+
+import java.util.InputMismatchException;
+import java.util.Scanner;
+
+public class LaunchExcep1 {
+
+	static void abc()
+	{
+         System.out.println("Welcome to divison app.");
+		
+		Scanner sc = new Scanner(System.in);
+		
+		
+		try
+		{
+			
+		 System.out.println("Enter Numerator !!!");
+			
+		 int firstNumber = sc.nextInt();
+			
+		 System.out.println("Enter Denominator !!!");
+			
+		int secondNumber = sc.nextInt(); //faulty input
+		
+		int result = firstNumber/secondNumber;
+		
+		System.out.println("The result is :"+ result);
+		
+		System.out.println("Thank you for using our app.");
+		}
+		catch(ArithmeticException ae)
+		{
+			System.out.println("Denominator should not be zero");
+		}
+		
+		catch(InputMismatchException ie)
+		{
+			System.out.println("Enter only number");
+		}
+		
+		finally
+		{
+			System.out.println("Thank-You!!! Use it again");
+	          }		
+		
+		
+	}
+	
+	
+     public static void main(String[] args) {
+		// TODO Auto-generated method stub
+		
+		abc();
+		
+		
+	}
+
+}
+
+File Handling and IO Streams
+========================
+
+Java I/O (Input and Output) is used to process the input and produce the output.
+
+Java uses the concept of a stream to make I/O operation fast. The java.io package contains all the classes required for input and output operations.
+
+We can perform file handling in Java by Java I/O API.
+
+Stream
+======
+
+A stream is a sequence of data. In Java, a stream is composed of bytes. It's called a stream because it is like a stream of water that continues to flow.
+
+                                                                                                                    (or)
+
+A  Stream is  a logical connection between a java program and file through which we can transfer data for storing(writing) or retrieving(reading).
+
+In Java, 3 streams are created for us automatically. All these streams are attached with the console.
+
+1) System.out: standard output stream
+
+2) System.in: standard input stream
+
+3) System.err: standard error stream
+
+Example :
+=======
+
+System.out.println("simple message");  
+System.err.println("error message");  
+
+So, Basically :
+
+How many types of streams are there in java ?
+================================
+Based on direction of flow :
+
+1.OutputStream
+
+2. InputStream
+
+Based on type of dataflow :
+
+1. Byte OutputStream
+
+2. Charater OutputStream
+
+What is OutputStream ?
+==================
+
+The stream which we send data from java application to File or console i.e., OutputStream.
+
+What is InputStream ?
+=================
+
+The stream which we retrieve or read data from a File or keyboard i.e., InputStream.
+
+So, in java we can send data in binary format or character format.
+
+Note : InputStrem and OutputStream are both classes in java.io package.
+
+Types of classes :
+===========
+
+1. Interface class
+
+2.Abstract class
+
+3.Concrete(normal class)
+
+4. Final 
+
+5. Annotatation
+
+Interface class : If all the methods, if we want to implement them in the subclass.
+
+Abstract class : If some of the methods, if we want to implement them in subclass.
+
+Concrete class : Already implemented methods, if i wanted to reuse them.
+
+InputStream and OutputStream classes are abstract classes.
+
+Reason : there were of total 9 methods, out of 9 methods 8 methods were common to all subclasses, only 1 method i.e. read() or write() is different for every subclass.
+
+
+Input Stream: reads data from the source. 
+
+Output Stream: writes data to a destination. 
+
+When to use Character Stream over Byte Stream?
+
+In Java, characters are stored using Unicode conventions. Character stream is useful when we want to process text files. These text files can be processed character by character. Character size is typically 16 bits.
+
+When to use Byte Stream over Character Stream?  
+
+Byte oriented reads byte by byte.  A byte stream is suitable for processing raw data like binary files.
+
+Key Note :
+=======
+
+Names of character streams typically end with Reader/Writer and names of byte streams end with InputStream/OutputStream.
+
+What were the subclasses that were there ?
+===========================
+
+--------see flowchart-------------------
+
+->InputStream class is an implementation class of Closable interface
+
+-> In this closable interface, there is a special method called close() and this close() method is implemented in InputStream class and OutputStream class and is available to all its subclasses.
+
+-> In order to call close() method automatically, we need to use try with resource.
+
+-> To support try with resource, they have created a special interface called Autoclosable in JDK 1.7.
+
+-> Autoclosable interface is present in java.lang package.
+
+InputStream and OutputStream class methods :
+===============================
+
+In order to develop program, we should be knowing of what are the methods that are available inside InputStream and OutputStream classes.
+
+-----------see flowachart-------------------------
+
+Need of IO Streams :
+==============
+
+* How to store data inside a file permanently.
+
+*How to read from a file.
+
+* How to a read data from keyboard.
+
+* How to write data into a console.
+
+Without learning this chapter can i develop the project ?
+
+Once, the program is compiled, executed, all the values that are stored will go off in RAM.
+
+-> To store them permanently, we need a file.
+
+-> Using IO Streams chapter, we can perform persistance operations on a file.
+
+-> IO Streams in the project we will not use much, because File also has security issues, file data organisation is not good, if data increases file size also increases, we dont have searching algorithms in the file.
+
+-> So in business we are not going file system, instead of that we are going to use databases.
+
+-> To interact with database, we have jdbc api in java.
+
+-> To interact with data on remote files, i will use networking concept in java.
+
+-> working with xml, csv, i will be using streams chapter.
+
+-> storing small amounts of data -> IO Streams
+
+-> storing large amounts of data -> database
+
+File Handling :
+===========
+
+In this concept, we are going to work with files or file system.
+
+                                                 (or)
+We are going to perform read and write operations or copy operation from one file to another file on the file sytem.
+      
+
+Using Streams, we are doing file handling.
+
+There were some predefined steps which to be performed while reading or writing on a file.
+
+Steps to write and read from a file :
+===========================
+ write data into a file :
+===================
+
+1. Add import java.io.* package statement.
+
+2. Create OutputStream class object.( this is not possible because this class is abstract)
+ So, we have to create objects for subclasses based on the source => we will create object for FileOutputStream .
+
+ FileOutputStream fos = new FileOutputStream("f.txt");
+
+3. invoke fos.write(data) ; to store data into the file
+
+4. invoke fos.flush(); to flush data into the file.
+
+5. invoke fos.close(); to close the connection or stream object.
+
+6. Handle the exceptions => IOException, FileNotFoundException.
+
+import java.io.FileOutputStream;  
+public class FileOutputStreamExample {  
+    public static void main(String args[]) { 
+           
+           try{    
+             FileOutputStream fout=new FileOutputStream("D:\\testout.txt");    
+             fout.write(65); 
+             fout.flush();   
+             fout.close();    
+             System.out.println("success...");    
+            }catch(Exception e){System.out.println(e);}    
+      }    
+}  
+
+
+import java.io.FileOutputStream;  
+public class FileOutputStreamExample {  
+    public static void main(String args[]){    
+           try{    
+             FileOutputStream fout=new FileOutputStream("D:\\testout.txt");    
+             String s="Welcome to javaTpoint.";    
+             byte b[]=s.getBytes();//converting string into byte array    
+             fout.write(b);    
+             fout.close();    
+             System.out.println("success...");    
+            }catch(Exception e){System.out.println(e);}    
+      }    
+}  
+
+Assignment : Write a program to write string data appended into a file.
+previous version : Are you ready?
+Updated version of file : Are you ready? WelcomeToJava 
+
+
+Steps to read data from a file :
+========================
+
+1. Add import java.io.* ;
+
+2. create FileInputStream object.
+
+    FileInputStream fis = new FileInputStream(f.txt);
+
+3. Invoke fis.read(); for reading data.
+
+4. Invoke fis.close();
+
+5. Handling the exceptions FileNotFoundException and IOException.
+
+read single character
+==================
+import java.io.FileInputStream;  
+public class DataStreamExample {  
+     public static void main(String args[]){    
+          try{    
+            FileInputStream fin=new FileInputStream("D:\\testout.txt");    
+            int i=fin.read();  
+            System.out.print((char)i);    
+            fin.close();    
+          }catch(Exception e){System.out.println(e);}    
+         }    
+        }  
+
+read all characters
+================
+  
+import java.io.FileInputStream;  
+public class DataStreamExample {  
+     public static void main(String args[]){    
+          try{    
+            FileInputStream fin=new FileInputStream("D:\\testout.txt");    
+            int i=0;    
+            while((i=fin.read())!=-1){    
+             System.out.print((char)i);    
+            }    
+            fin.close();    
+          }catch(Exception e){System.out.println(e);}    
+         }    
+        }  
+
+Note :
+========
+
+ Using IOStreams chapter , we are not developing any business logic i.e., validations and calculations on data.
+
+ -> Whenever you want to work with any class, you have to know two points :
+
+  1. What are the constructors available in the class for creating objects.
+
+  2. What are the methods that are avilable inside the class to work with them to perform operations.
+
+Java Writer
+==========
+
+It is an abstract class for writing to character streams. The methods that a subclass must implement are write(char[], int, int), flush(), and close(). Most subclasses will override some of the methods defined here to provide higher efficiency, functionality or both.
+
+import java.io.*;  
+public class WriterExample {  
+    public static void main(String[] args) {  
+        try {  
+            Writer w = new FileWriter("output.txt");  
+            String content = "I love my country";  
+            w.write(content);  
+            w.close();  
+            System.out.println("Done");  
+        } catch (IOException e) {  
+            e.printStackTrace();  
+        }  
+    }  
+}  
+
+Java Reader
+==============
+
+Java Reader is an abstract class for reading character streams. The only methods that a subclass must implement are read(char[], int, int) and close(). Most subclasses, however, will override some of the methods to provide higher efficiency, additional functionality, or both.
+
+Some of the implementation class are BufferedReader, CharArrayReader, FilterReader, InputStreamReader, PipedReader, StringReader
+
+import java.io.*;  
+public class ReaderExample {  
+    public static void main(String[] args) {  
+        try {  
+            Reader reader = new FileReader("file.txt");  
+            int data = reader.read();  
+            while (data != -1) {  
+                System.out.print((char) data);  
+                data = reader.read();  
+            }  
+            reader.close();  
+        } catch (Exception ex) {  
+            System.out.println(ex.getMessage());  
+        }  
+    }  
+}
+
+Multithreading :
+---------------------
+
+Multithreading in Java is a process of executing multiple threads simultaneously.
+                                                                              (or)
+
+Execution of more than one thread at a time is called as multithreading.
+
+
+   download -> install -> run (use that app)
+    Hard disk                      process => thread
+
+
+What is Thread :
+---------------------------
+
+A thread is a lightweight sub-process, the smallest unit of processing.
+(A Thread is a smallest unit of a process) 
+
+                                                          (or)
+A thread is a piece of code that executes independently.(Smallest piece of code)
+
+Every program contains at least one thread. i.e. main thread
+
+Main thread default name is main only.
+
+Main thread default priority is normal priority(Priority number is 5)
+
+Process - A program under exceution.
+
+Multiprocessing and multithreading, both are used to achieve multitasking.
+
+However, we use multithreading than multiprocessing because threads use a shared memory area.
+
+Java Multithreading is mostly used in games, animation, etc.
+
+Advantages of Java Multithreading
+----------------------------------------------
+1) It doesn't block the user because threads are independent and 
+you can perform multiple operations at the same time.
+
+2) You can perform many operations together, so it saves time.
+
+3) Threads are independent, so it doesn't affect other threads if an exception occurs in a single thread.
+
+=========================================================================
+
+Life cycle of a thread :
+--------------------------------
+
+***Attched image****
+
+Whenever thread class constructor is called new thread will born.
+
+Thread comes to a ready(runnable) state whenever start() method is called.
+
+Thread will run whenever run() method is called.
+
+Thread comes to a sleeping state whenever sleep() method is called.
+Sleeping thread will wake up automatically whenever time interval is finished.
+Thread is suspended whenever suspend() method is called.
+
+Suspended thread will run whenever resume() method is called.
+
+Thread comes to a waiting state whenever wait() method is called.
+
+Waiting thread will run whenever notify() method is called.
+
+Thread will die whenever destroy() method is called.
+
+Program to get current thread information:
+-------------------------------------------------------
+
+class Demo
+{
+        public static void main(String args[])
+        {
+                Thread t=Thread.currentThread();
+                System.out.println(t.getName());
+                System.out.println(t.getPriority());
+                t.setName(“demo”);
+                t.setPriority(Thread.MAX_PRIORITY);
+                System.out.println(t.getName());
+                System.out.println(t.getPriority());       
+}
+}
+
+How to create a thread in Java ???
+
+There are two ways to create a thread:
+
+1.By extending Thread class
+2.By implementing Runnable interface.
+3. Executors => threads will be created automatically by jvm
+
+
+1.By extending Thread class :
+
+Steps to develop multithreaded application by extending java.lang.Thread class:
+-------------------------------------------------------
+
+1) Create a class that extends java.lang.Thread class
+2) Override run() method.
+Note: run() method given as a null body method to write child thread task code.
+3) Write child thread task code in a run() method.
+4) Write main() method
+5) Create an object of current class.
+6) Call start() method.
+Note: start() method implicitly calls run() method.
+7) Write main thread task code in a main() method.
+
+
+Why Runnable ? => interface
+
+
+class B
+{
+    int rollNo;
+}
+
+class A extends Thread => A thread
+{
+   public void run()
+{
+    System.out.println("another thread"); 
+
+ }
+public static void main(String[] args)
+{
+   A obj = new A();
+   Thread obj = new A();
+   Thread obj = new Thread(new A());
+
+    obj.start();
+
+   S.O.P(Thread.currentThread().getPriority());
+  
+
+}
+}
+
+
+
+
+
+// Java code for thread creation by extending
+// the Thread class
+class MultithreadingDemo extends Thread {
+	public void run()
+	{
+		try {
+			// Displaying the thread that is running
+			System.out.println(
+				"Thread " + Thread.currentThread().getId()
+				+ " is running");
+		}
+		catch (Exception e) {
+			// Throwing an exception
+			System.out.println("Exception is caught");
+		}
+	}
+}
+
+// Main Class
+public class Multithread {
+	public static void main(String[] args)
+	{
+		int n = 8; // Number of threads
+		for (int i = 0; i < n; i++) {
+			MultithreadingDemo object
+				= new MultithreadingDemo();
+			object.start();
+		}
+	}
+}
+
+2.)Thread creation by implementing the Runnable Interface
+
+Steps to create multithread application by implementing
+java.lang.Runnable interface:
+
+1) Create a class that implements java.lang.Runnable interface.
+2) Override run() method.
+3) Write child thread task code in a run() method.
+4) Write main() method
+5) Create an object of current class & assign to Runnable reference
+6) Create an object Thread class by passing Runnable reference
+7) Call start() method.
+8) Write main thread task code in a main() method.
+
+class A implements Runnable
+{
+    public void run()
+    {
+
+     }
+
+}
+
+class B
+{
+
+   public static void main(String[] args)
+   {
+      Runnable obj = new A();
+
+       Thread t = new Thread(obj);
+   }
+
+}     
+
+
+
+
+
+
+
+
+
+// Java code for thread creation by implementing
+// the Runnable Interface
+class MultithreadingDemo implements Runnable {
+	public void run()
+	{
+		try {
+			// Displaying the thread that is running
+			System.out.println(
+				"Thread " + Thread.currentThread().getId()
+				+ " is running");
+		}
+		catch (Exception e) {
+			// Throwing an exception
+			System.out.println("Exception is caught");
+		}
+	}
+}
+
+// Main Class
+class Multithread {
+	public static void main(String[] args)
+	{
+		int n = 8; // Number of threads
+		for (int i = 0; i < n; i++) {
+			Thread object
+				= new Thread(new MultithreadingDemo());
+			object.start();
+		}
+	}
+}
+
+Thread Class vs Runnable Interface :
+==========================
+
+1.If we extend the Thread class, our class cannot extend any other class because
+ Java doesn’t support multiple inheritance. 
+But, if we implement the Runnable interface, our class can still extend other base classes.
+
+2.We can achieve basic functionality of a thread by extending Thread class 
+because it provides some inbuilt methods like yield(), interrupt() etc. 
+that are not available in Runnable interface.
+
+3.Using runnable will give you an object that can be shared amongst multiple threads. 
+
+Synchronization:
+---------------------------
+
+It is a mechanism that allows to access a shared resource only one thread at a time.
+                                                                      
+                                                                           (or)
+Synchronization in Java is the capability to control the access of multiple threads to access any shared resource to make it thread-safe.
+
+There are two ways to synchronize the code:
+
+1) synchronizing a method
+2) synchronizing block of code
+
+
+
+1) synchronizing a method:
+
+Syntax:
+synchronized ReturnType MethodName(arg1, arg2, ......)
+{
+        ================
+        ================
+        ================
+}
+
+2) synchronizing a block of code:
+
+Syntax:
+ReturnType MethodName(arg1, arg2, ......)
+{
+        ================
+        ================
+        synchronized
+        {
+                ================  
+                ================
+        }
+        ================
+        ================
+}
+ 
+
+
+
+
+

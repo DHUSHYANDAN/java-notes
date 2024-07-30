@@ -1,0 +1,493 @@
+Abstraction :
+----------------------
+
+  Providing neccessary information and hiding uneccessary information is called as   abstraction.
+                                                                        (or)
+  Providing neccessary information without disclosing(including) background details.
+
+  In java, abstraction can be implemented using abstract classes and interfaces.
+
+  Abstract class :
+---------------------
+
+A class that is declared with abstract keyword is called as abstract class.
+
+abstract class A
+{
+   abstract void show();
+   void print()
+   {
+     //set of statements
+
+   }
+}
+
+   A abstract class can have only abstract methods, only non - abstract methods or both abstract and non - abstract methods.
+
+Non- abstract methods are also called as concrete methods.
+
+Abstract method :
+---------------------
+
+A method that has no body is called a abstract method.
+
+  Abstract method must be declared with abstract keyword in java, otherwise compile-time error occurs.
+
+ abstract void show(); // abstract method declaration.
+
+  Non-abstract method  or concrete method:
+-----------------------------------------------
+
+A method that has a body is called as an concrete method.
+
+void show()
+{
+
+}
+
+ If the class contains an abstract method, then the class must be declared with  abstract keyword, otherwise compile time error occurs.
+
+1.) 
+abstract class A
+{
+   void show()
+   {
+      
+   }
+ abstract void print();
+ 
+}
+
+    
+
+2.)
+
+abstract class B
+{
+
+ void show(){
+
+  }
+   abstract void print();
+
+} 
+
+
+3.)
+abstract class C
+{
+
+  abstract void show();
+  abstract void set();
+  void print()
+  {
+
+   }
+void display(){
+
+}
+} 
+
+abstract class D extends C
+{
+  abstract void show();
+
+   void set()
+  {
+
+   }
+}
+
+ class E extends D
+{
+     void show()
+   {
+
+   }
+}
+
+
+
+ Abstract classes cannot be instantiated.instantiation means object creation.
+
+Abstract classes can be inherited into another class by using "extends" keyword.
+
+ Whenever abstract class is inherited then, all the abstract methods of an abstract class must be overridden in the sub class or the sub class must be declared with abstract keyword otherwise compile-time error occurs.
+
+Program - 1:
+-----------------
+
+abstract class A
+{
+	abstract void show();
+	
+	
+	
+	void print()
+	{
+		System.out.println("print() method");
+	}
+
+            psvm()
+        {
+               A obj = new A();
+              obj.print();
+         }
+}
+
+ class Main extends A
+{
+	 void show()
+	{
+		System.out.println("show() method");
+	}
+	 
+	void display()
+	{
+		System.out.println("display() method");
+	}
+	public static void main(String[] args)
+	{
+	
+	    Main obj = new Main();
+	    obj.show();
+	    obj.display();
+	    obj.print();
+	    
+	}
+}
+
+program - 2 :
+----------------
+abstract class A
+{
+	abstract void show();
+	
+	abstract void give();
+	
+	void print()
+	{
+		System.out.println("print() method");
+	}
+}
+
+ abstract class Main extends A
+{
+	 void show()
+	{
+		System.out.println("show() method");
+	}
+	 
+	 abstract void give();
+}
+
+
+class D extends Main
+{
+	void give()
+                  {
+                       System.out.println("give() method");
+                   }
+
+
+        
+	void display()
+	{
+		System.out.println("display() method");
+	}
+	public static void main(String[] args)
+	{
+	    D obj = new D();
+	    obj.show();
+	    obj.display();
+	    obj.print();
+                        obj.get();
+	    
+	}
+}
+
+Note :
+-------------
+
+Abstract methods cannot be final.
+
+Abstract methods cannot be static.
+
+Abstract methods cannot be private.
+
+Abstract classes can have constructors and those constructors are called whenever the object of the sub classes are created.
+
+abstract class A
+{
+	A()
+	{
+		System.out.println("constructor");
+	}
+}
+
+class Main extends A
+{
+	Main() //implicitly present
+	{
+		super(); //This will be there implicitly.
+	}
+	public static void main(String[] args)
+	{
+		new Main();
+	}
+}
+
+Abstract class can have static members.
+
+abstract class A
+{
+	static void show()
+	{
+		System.out.println("show() method");
+	}
+}
+
+class Main extends A
+{
+	
+	public static void main(String[] args)
+	{
+		Main.show();
+	}
+}
+
+abstract class can have main method also.
+
+abstract class Main
+{
+	
+	public static void main(String[] args)
+	{
+	 System.out.println("welcome");
+	}
+}
+
+Interfaces :
+---------------
+
+An interface is a collection of public static final variables and public abstract methods.
+
+In an interface, all variables are implicitly public static final and 
+all methods are implicitly public abstract.
+
+Interface itself impilcitly abstract.
+
+Interfaces also cannot be instantiated.
+Instantiation means object creation.
+
+interface A
+{
+   int a ;
+   
+   void show();
+   void give();
+}
+
+Interface can be inherited into a class by using implements keyword.  
+
+Interface can also be inherited into another interface by using extends keyword.
+
+
+class cannot inherit the inteface.
+
+Whenever interface is inherited into a class 
+all the abstract methods must be overridden in the sub class , 
+if not declare sub class with abstract keyword otherwise compile time error occurs.
+
+.Class file will also be generated for every interface.
+
+Program -1:
+--------------------
+interface A
+{
+	 public static final int a = 5;
+	 void show();
+}
+
+class Main implements A
+{
+	int b = 10;
+	
+ 
+     
+    void print()
+    {
+    	System.out.println("Print() method");
+    }
+    
+    
+    public static void main(String[] args)
+    {
+    	Main obj = new Main();
+    	obj.show();
+    	obj.print();
+    	System.out.println(A.a);
+    	System.out.println(obj.b);
+    }
+
+}
+
+Program-2 :
+-------------------
+
+interface A
+{
+	int a = 5;
+	void show();
+}
+
+class Main implements A
+{
+	int b = 10;
+	
+     public void show()
+	{
+		System.out.println("show() method");
+	}
+     
+    void print()
+    {
+    	System.out.println("Print() method");
+    }
+    
+    
+    public static void main(String[] args)
+    {
+    	A obj = new Main();
+    	obj.show();
+    	//obj.print();
+    	System.out.println(A.a);
+    	//System.out.println(obj.b);
+    }
+
+}
+
+ Intefaces are introduced in java is to achieve multiple inheritance.
+
+      class A{}
+      class B{}
+     interface C{}
+      interface D{}
+
+  class Main extends A,B{}
+
+   class Main1 implements C,D{}
+
+   class Demo extends A implements C{} 
+
+   class Demo1 extends A implements C,D{} 
+
+    interface S extends C,D{} 
+
+    interface E extends A,B{} //Not valid
+
+  One interface inheriting two or more classes is not valid.
+
+
+    Abstract class supports 0-100 % abstraction whereas 
+    interfaces support only 100% abstraction. 
+
+This is about the interfaces.
+
+Encapsulation :
+-------------------------
+
+What is   En-capsule-ation ?
+
+Encapsulation in java is a process 
+of wrapping code(methods) and data(variables)
+ together into a single unit like a capsule.
+
+                                                                                  (or)
+
+Binding of variables and methods into a single unit and
+ those methods(getters and setters) are operating on the same variables. 
+This is known as encapsulation.
+
+ To perform encapsulation there are some rules we need to follow :
+
+1. in a specific class(Java Bean), the variables declared must be private.
+
+2. To access those private variables we need getter and setter methods 
+that must be declared as public.
+
+
+The java bean class is the example of fully encapsulated class.  
+
+setter method is used for setting the value of private variable.
+
+getter method is used for getting/returning the value of private variable.
+
+Note : The setters and getters are used only for 
+accessing the private data or variables outside another class.
+
+class Employee //java bean
+{
+	private int age;
+                   
+	
+	public void setAge(int age) //setter method
+	{
+		if(age>100)
+		{
+			this.age = 100;
+		}
+		else if(age<0)
+		{
+			this.age = 0;
+		}
+		else
+		{
+			this.age = age;
+		}
+	}
+	
+	public int getAge()
+	{
+		return this.age;
+	}
+}
+
+class Main 
+{
+	public static void main(String[] args)
+	{
+		Employee obj = new Employee();
+	
+		obj.setAge(20);
+		
+		int x = obj.getAge();
+		
+		System.out.println("The age of employee is : "+x);
+		
+	}
+}
+
+In the above Program, age variable is bounded with setAge() and getAge() methods
+ and these methods are operating on age variable. This is known as Encapsulation. 
+
+Application of Encapsulation :
+-----------------------------------
+
+Encapsulation is used for data(variables) hiding.
+
+
+35. Write a program to generate the below output :
+i/p :  aaabbbbccd -> o/p: 3a4b2c1d
+i/p: aabbcd -> o/p: 2a2b1c1d
+
+ 
+36. Shift the elements of an array by k places :
+k = 2 and arr is [1,2,3,4,5]
+o/p should be [4,5,1,2,3]
+
+
+
+
+
+
