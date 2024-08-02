@@ -1,0 +1,1464 @@
+
+
+
+
+What is web development ?
+==================
+
+-> Web development is the process of creating websites on the internet.
+
+
+How internet works ?
+==============
+
+What is Internet ?
+===============
+-> Lot of people think internet is something cloud and is super complex to understand.
+
+-> But it is actually a long piece of wire with computers attached to it where they can talk to each other and transfer data through this joint wire.
+
+-> Its a bunch of wires that connects up different computers.
+
+-> The Internet, is a worldwide system of computer networks -- a network of networks in which users at any one computer can, if they have permission, get information from any other computer (and sometimes talk directly to users at other computers). 
+
+
+
+How it works ?
+============
+Client -> for sending messages over the internet, any computer that is connected to internet.
+
+Server -> for receiving and processing the messages they are something that are available 24/7 online to serve you the data all it contains all the time when you request.
+
+ISP -> internet service provider
+
+DNS ->Domain name system -> is like a phonebook it searches the exact ip address of the website that you were looking for.
+
+-> Every single computer that is connected over the internet has a unique ip address like 192.18.11 (type ipconfig in cmd to locate your ip address of your system). -> www.NsLookup.com
+
+-> Internet is also called as a joint library that is open all the time where you have different servers where you can access it.
+
+-> By default, computer cannot receive or send a message for that we need a backend programming language to code it.
+
+-> Every computer has a feacture to convert itself into server and allows it to receives messges.
+
+-> Frontend,Backend and Database works on request-response cycle over the internet.
+
+What technology stack are required to build websites ?
+====================================
+
+Frontend Technologies -> UI
+
+Backend Technologies -> Business Logic
+
+Database Technologies -> Storage of data
+
+What is FrontEnd ?
+==================
+-> FrontEnd development refers to the part of the website that the user directly interacts with.
+
+-> The FrontEnd developer is responsible of doing this all the stuff that you are going to view on the website visually that includes styling, graphics, text, alignment, navigation, colours, e.t.c.,
+
+-> Responsiveness and Performance of the website are the two main objectives of frontend development.
+
+->Technology stack that were used to develop frontend are 
+
+
+HTML, Css, JS,
+
+Bootstrap,JQuery, React, Angular, Vue.Js,e.tc., 
+
+What is Backend ?
+==================
+-> Backend development refers to the server side of the website, which focuses on everything you cannot see on the website .
+
+-> The backend developer is responsible for doing this stuff.
+ It includes activities like writing APIs, creating libraries, and working with system components.
+
+-> It includes data integrity(accuracy) and consistency(able to see transparent changes done by other users).
+
+->It also involves scripting and writing code to communicate with databases.
+
+-> Backend requires much amount of code to write so we use framework and packages to make our life easier.
+
+-> Technology stack that were used to develop backend services are Java,Python,C#,.Net,C++,
+
+
+NodeJS,Php,Ruby,Perl,Spring,Springboot,Django,e.t.c.,
+
+-> We also need package managers to manage the packages like npm for js, pip for python, bundler for ruby and maven for java.
+
+What is Database ?
+====================
+
+-> A Database helps us in storing and managing the data.
+
+-> Its just a piece of software that usually runs in different computer or server, we have to do some setup from backend to communicate with the database to store and retrieve the data.
+
+->The most popular databases are mysql,oracle,postgressql,mongodb.
+
+
+What does mean by a Full Stack Developer ?
+================================
+
+Who knows frontend + Backend + Database Technologies.
+
+
+
+What are the ways to become a full stack developer ?
+===================================
+
+Java Full Stack -> Java, Spring, Springboot => only in backend
+
+Mern Stack -> NodeJs and ExpressJs
+
+Mean Stack -> Angular in frontend
+
+HTML
+=========
+
+-> Which browser you use either it may be google chrome, mozzila or microsoft explorer all the browsers render the files like html,css and js and put it on the web page.
+
+-> Without html, with only css and js we cannot create a webpage, but with alone html, we can create a webpage.
+
+-> HTML stands for hypertext markup language.
+
+* HyperText :- these pieces of texts are also called as hyperlinks which can link to other documents(Web Pages) that lays the foundation of the website.
+
+*Markup :- it refers to the tags that give a special meaning to our content on the webpage.
+
+ *Langauge :- its a kind of programming language to interact with the computer to make our work done by it.
+
+-> HTML is all about learning tags and attributes and knowing where to use when.
+
+
+one editor :- IDE(integrated development environment)
+
+vs code 
+
+
+
+
+(Go to codepen.io and practice initially.)
+
+Heading Tags in HTML :
+===================
+
+-> HTML headings are defined with the <h1> to <h6> tags. 
+-> <h1> defines the most important heading and <h6> defines the least important heading.
+
+documentation : mdn(mozzila developer network) docs 
+                              w3schools.org
+                              devdocs.io
+
+->In html direct spacing will not work. In order achieve spacing between lines we need a html element called line break <br>. and good thing about that is it does not have a closing tag.
+
+Anatomy of a HTML Tag(The skeleton) :
+=============================
+
+
+<h1>Hello</h1>                                                                opening content  closing tag
+
+<br> -> doesn't have a closing tag, it is called as a self-closing tag.
+
+<hr> -> it is also a self closing tag which gives us a horizontal line on the page.
+
+-> In order to see the html and css that is rendered on the webpage you can inspect that element.
+
+                                                                                               html attribute
+                                                                                    <hr  size   = "4">
+                                                                                   html element 
+
+HTML Attribute : It basically gives mofre information to the browser, to specify modifications to that html element.
+
+-> Instead of <center> tag that is already deprecated we are going to use css style attribute i.e., text-align : center which will function the same.
+
+code :
+======
+
+<center>
+<hr size="3" noshade>
+<h1>The Adventures of Sherlock Holmes</h1>
+
+<h3>by</h3> 
+
+<h2>Arthur Conan Doyle</h2>
+<hr size="3" noshade>
+</center>
+
+due to deprecated center tag :
+======================
+
+<div style="text-align:center">
+<hr size="3" noshade>
+<h1>The Adventures of Sherlock Holmes</h1>
+
+<h3>by</h3> 
+
+<h2>Arthur Conan Doyle</h2>
+<hr size="3" noshade>
+</div>
+
+Challenge cum Assignment 1 : 
+=====================
+**create this notes content and represent it in html format using the discussed tags.
+
+Comments in HTML :
+=================
+Comments are portions of text that are ignored by the browser for execution.
+
+   <!-- everthing is a comment that is placed inside here -->
+
+*** web.archive.org -> to see the snapshots of back generation websites.
+
+-> Look at John kleinberg a famous computer science lecturer personal site.
+
+-> In the same way we are going to build our 1st HTML Personal Site.
+
+Learning-Project-1 : Html Personal Site.
+
+HTML Boilerplate :(Burger Structure)
+===============
+
+-> It means understanding the structure of the html code. 
+example : the leave letters that you write.
+
+-> In the same way there is a structure for our html files (website).
+
+<!DOCTYPE html> //which version of html that file is written in. and latest version of html is HTML5 which launched in 2012.
+
+
+
+<html lang="en"> //root of html where all content will be placed inside this. and lang attribute defines the language of the text content in that element this attribute will be useful for screen readers that read the content over the page.
+
+   <head> //this is the area where important information about our website will be placed that is not displayed to the users. It includes things that helps in rendering the website correctly but it doesn't include any content like text, images e.t.c.,
+       <meta charset = "UTF-8"> //encoding format that helps in displaying the characters,emojis,symbols correctly that we use. UTF-8 includes all                                            international symbols including every Unicode character.
+      <title>My Page</title> //the text that is displayed on your tab
+  </head>
+  <body> //this is where all of the content will be placed
+
+   //all the headings, images, links will be placed.
+
+
+  </body>
+</html>
+
+-> The important thing about an html file to easily read is formatting and indentation.
+
+-> save the file with .html for html files, type " !" and click enter, you will get all the boilerplate automatically.
+
+*viewport -> it tells how to display the webpage according to the screen size.
+
+G:
+
+
+
+
+
+
+
+How to structure text in HTML :
+==========================
+
+-> <p> -> which is used to represent paragraphs.
+
+-> to italicize the text use <i> or <em> they both does the same <em> tag emphasis or stress the text. For this reason use always <em> tag beacuse it gives more information about the text because in html concentrate  more on structuring rather than thinking about how it look. 
+
+-> to make the text bold use <b> or <strong> they both do the same but <strong> gives the strong importance to the text.
+
+Lists in HTML :
+==============
+<ul> stands for unordered list. it encloses all the parts that is included in the list.
+<li> stands for list item tag encloses the each and every bullet point.
+
+**see also in docs.
+
+<ol> stands for ordered list.
+
+Images in HTML :
+===============
+
+<img src="hyd.png" alt="hyderabad city image"> //here alt attribute stands for alternate text, it is used when a browser cannot render the image that                                                                                                    is specified in src,than it specify that text instead of that image and it describes what that image                                                                                                    is all about.It is also used by SEO.
+
+-> The image can be in local storage in the same directory or folder or it can be in online.
+
+**photobucket.com -> upload a image there and generate the link from it.
+
+-> if the image is no longer available or deleted from internet than what is the choice ? than the other option is local.
+
+<img src="images/hyd.png" alt="hyderabad city image">
+
+**crop-circle.imageonline.co -> to crop your image.
+
+Links and Anchor Tags in HTML :
+=========================
+
+Hypertext :- Bunch of text documents that are linked together using the hyperlinks.
+
+**wikigame - a game to play with hyperlinks.
+
+<a href="www.google.com">google website</a> //here href is that specifies that where the hyperlink points to.It is link destination.
+                                                      link text that is displayed to us ( it will be blue if it is never clicked from the loading of page and it will become purple if it is                                                                                                                 clicked)
+**ctrl and click -> they will open up in new tabs
+
+What if wanted to link to another html documents or web pages  like a website ?
+ 
+-> Simple, create a new file with same html boiler plate and with your own body content and save it with .html extension
+
+-> Then, link it up to the main page or document with hyperlink like this <a href="newpage.html">new page</a> 
+
+Challenge cum Assignment-2 :
+===================
+ 
+Add a contact me page to main page using your hyperlinks concept.
+
+
+Roshith
+900000
+tyy@gmail.com
+
+
+==========================================================================================
+
+
+<h1>
+<hr>
+<br>
+<center>
+<p>
+<i>
+<em>
+<b>
+<strong>
+<head>
+<meta>
+<body>
+<ol>
+<ul>
+<li>
+<img>
+<a>
+
+Tables in HTML :
+==============
+
+-> The <table> HTML element represents tabular data — that is, information presented in a two-dimensional table comprised of rows and columns of cells containing data.
+
+<table border="1" cellspacing="20"> //This represents the table tag and it should have a closing tag
+    <thead> //This is optional because most browsers how they should be formatted but to maintain sections we need them that will be used later to style                        them. Here we can add some titles to each of our columns that they are formatted by default in bold.
+        <tr> //it represents the single row of the table
+            <th colspan="2">The table header</th> //it represents the table headings in the columns
+        </tr>
+    </thead>
+    <tbody> //This is also optional
+        <tr>
+            <td>The table body</td> //it represents value inserted in table columns i.e., the table data will be inserted horizontally one after the another
+            <td>with two columns</td>
+        </tr>
+    </tbody>
+    <tfoot> //generally we will not maintain or write this footer part
+
+    </tfoot>
+</table>
+
+-> By default, we will not be having any styles for tables like border,padding e.t.c.,
+
+-> All of the attributes for table element are deprecated(it is something that no longer recommended to use it, not for use in new websites).
+
+-> border attribute : This integer attribute defines, in pixels, the size of the frame surrounding the table.
+
+** refer Thomas H. Cormen , a professer of computer science personal site.
+
+-> cellspacing attribute : This attribute defines the size of the space between two cells in a percentage value or pixels.
+
+<colgroup>: The Table Column Group element
+===================================
+
+-> The <colgroup> HTML element defines a group of columns within a table.
+
+Example Code :
+==========
+
+<table>
+    <caption>Superheros and sidekicks</caption>
+    <colgroup>
+        <col>
+        <col span="2" class="batman">
+        <col span="2" class="flash">
+    </colgroup>
+    <tr>
+        <td> </td>
+        <th scope="col">Batman</th>
+        <th scope="col">Robin</th>
+        <th scope="col">The Flash</th>
+        <th scope="col">Kid Flash</th>
+    </tr>
+    <tr>
+        <th scope="row">Skill</th>
+        <td>Smarts</td>
+        <td>Dex, acrobat</td>
+        <td>Super speed</td>
+        <td>Super speed</td>
+    </tr>
+</table>
+
+Challenge cum Assignment- 3 :
+=======================
+create a skills section as shown in the class in your personal site using table knowledge in html.
+study more about cellspadding and colspan attribute
+
+target site reference : https://onepagelove.com/pascal-van-gemert
+
+HTML Forms :
+============
+
+-> Forms are used to input the data and perform some actions accordingly.
+
+-> We can structure the form using html but we can give the behaviour to that form only we learn js concepts.
+
+<form action="" method="post"> //form tag represents we are adding something related to form
+   <label>Your Name:</label> //label is something that user can see on the page before the input
+   <input type="text" name="" value=""> //input is a self-closing tag
+   <input type="color" name=""  value=""><br>
+   <label>Do you want to join the course ?</label>
+   <input type="checkbox" name=""  value=""><br>
+   <label>Password:</label>
+   <input type="password" name="" value=""><br>
+   <input type="submit" name="">
+
+</form>
+
+<input>: The Input (Form Input) element
+=============================
+-> The <input> HTML element is used to create interactive controls for web-based forms in order to accept data from the user; a wide variety of types of input data and control widgets are available, depending on the device and user agent.
+
+-> The <input> element is one of the most powerful and complex in all of HTML due to the sheer number of combinations of input types and attributes.
+
+input types :
+===========
+
+-> How an <input> works varies considerably depending on the value of its type attribute.
+
+-> If this attribute is not specified, the default type adopted is text.
+
+The available types :
+==============
+
+button	A push button with no default behavior displaying the value of the value attribute, empty by default.	
+
+checkbox	A check box allowing single values to be selected/deselected.	
+
+color	A control for specifying a color; opening a color picker when active in supporting browsers.	
+
+date	A control for entering a date (year, month, and day, with no time). Opens a date picker or numeric wheels for year, month, day when active in supporting browsers.	
+
+datetime-local	A control for entering a date and time, with no time zone. Opens a date picker or numeric wheels for date- and time-components when active in supporting browsers.	
+
+email	A field for editing an email address. Looks like a text input, but has validation parameters and relevant keyboard in supporting browsers and devices with dynamic keyboards.	
+
+file	A control that lets the user select a file. Use the accept attribute to define the types of files that the control can select.	
+
+hidden	A control that is not displayed but whose value is submitted to the server. There is an example in the next column, but it's hidden!	
+
+image	A graphical submit button. Displays an image defined by the src attribute. The alt attribute displays if the image src is missing.	
+
+month	A control for entering a month and year, with no time zone.	
+
+number	A control for entering a number. Displays a spinner and adds default validation. Displays a numeric keypad in some devices with dynamic keypads.	
+
+password	A single-line text field whose value is obscured. Will alert user if site is not secure.	
+
+radio	A radio button, allowing a single value to be selected out of multiple choices with the same name value.	
+
+range	A control for entering a number whose exact value is not important. Displays as a range widget defaulting to the middle value. Used in                     conjunction min and max to define the range of acceptable values.	
+
+reset	A button that resets the contents of the form to default values. Not recommended.	
+
+search	A single-line text field for entering search strings. Line-breaks are automatically removed from the input value. May include a delete icon in                     supporting browsers that can be used to clear the field. Displays a search icon instead of enter key on some devices with dynamic keypads.	
+
+submit	A button that submits the form.	
+
+tel	A control for entering a telephone number. Displays a telephone keypad in some devices with dynamic keypads.	
+
+text	The default value. A single-line text field. Line-breaks are automatically removed from the input value.	
+
+time	A control for entering a time value with no time zone.	
+
+url	A field for entering a URL. Looks like a text input, but has validation parameters and relevant keyboard in supporting browsers and devices                      with dynamic keyboards.	
+
+week	A control for entering a date consisting of a week-year number and a week number with no time zone.	
+
+
+<label>: The Label element
+======================
+The <label> HTML element represents a caption for an item in a user interface.
+
+<button>: The Button element
+========================
+
+The <button> HTML element is an interactive element activated by a user with a mouse, keyboard, finger, voice command, or other assistive technology. Once activated, it then performs an action, such as submitting a form or opening a dialog.
+
+Example Code :
+============
+
+<button class="favorite styled"
+        type="button">
+    Add to favorites
+</button>
+
+The Action Attribute :
+================
+-> The action attribute defines the action to be performed when the form is submitted.
+
+-> Usually, the form data is sent to a file on the server when the user clicks on the submit button.
+
+Example Code :
+============
+<form action="/action_page.java">
+  <label for="fname">First name:</label><br>
+  <input type="text" id="fname" name="fname" value="John"><br>
+  <label for="lname">Last name:</label><br>
+  <input type="text" id="lname" name="lname" value="Doe"><br><br>
+  <input type="submit" value="Submit">
+</form>
+
+-> method attribute can be set to get or post based on our reuirement.
+
+Notes on GET:
+================
+
+->Appends the form data to the URL, in name/value pairs
+-> NEVER use GET to send sensitive data! (the submitted form data is visible in the URL!)
+-> The length of a URL is limited (2048 characters)
+-> Useful for form submissions where a user wants to bookmark the result
+-> GET is good for non-secure data, like query strings in Google
+
+Notes on POST:
+==============
+
+-> Appends the form data inside the body of the HTTP request (the submitted form data is not shown in the URL)
+-> POST has no size limitations, and can be used to send large amounts of data.
+-> Form submissions with POST cannot be bookmarked
+
+Tip: Always use POST if the form data contains sensitive or personal information!
+
+The Autocomplete Attribute
+=====================
+-> The autocomplete attribute specifies whether a form should have autocomplete on or off.
+
+-> When autocomplete is on, the browser automatically complete values based on values that the user has entered before.
+
+Example Code :
+===============
+A form with autocomplete on:
+
+<form action="/action_page.php" autocomplete="on">
+
+The Novalidate Attribute
+=================
+
+-> The novalidate attribute is a boolean attribute.
+
+-> When present, it specifies that the form-data (input) should not be validated when submitted.
+
+Example Code:
+=============
+A form with a novalidate attribute:
+
+<form action="/action_page.php" novalidate>
+
+Challenge cum Assignment-4 :
+=====================
+
+Explore everything about forms in the mdn docs and create a contact me form in your contact me page with Name,Skill,Email,Phone number,Profession as the input fields along with a submit button.
+
+What are Semantic Elements or Tags ?
+
+Semantics :
+==========
+
+-> In programming, Semantics refers to the meaning of a piece of code — for example "what effect does running that line of JavaScript have?", or "what purpose or role does that HTML element have".
+
+-> A semantic element clearly describes its meaning to both the browser and the developer.
+
+-> Examples of non-semantic elements: <div> and <span> - Tells nothing about its content.
+
+-> Examples of semantic elements: <form>, <table>, and <article> - Clearly defines its content.
+
+-> Many web sites contain HTML code like: <div id="nav"> <div class="header"> <div id="footer"> to indicate navigation, header, and footer.
+
+-> In HTML there are some semantic elements that can be used to define different parts of a web page :
+
+<article>
+<aside>
+<details>
+<figcaption>
+<figure>
+<footer>
+<header>
+<main>
+<mark>
+<nav>
+<section>
+<summary>
+<time>
+
+HTML <section> Element :
+====================
+
+-> The <section> element defines a section in a document.
+
+-> According to W3C's HTML documentation: "A section is a thematic grouping of content, typically with a heading."
+
+-> Examples of where a <section> element can be used:
+
+Chapters
+Introduction
+News items
+Contact information
+
+-> A web page could normally be split into sections for introduction, content, and contact information.
+
+Code :
+========
+
+<section>
+<h1>WWF</h1>
+<p>The World Wide Fund for Nature (WWF) is an international organization working on issues regarding the conservation, research and restoration of the environment, formerly named the World Wildlife Fund. WWF was founded in 1961.</p>
+</section>
+
+<section>
+<h1>WWF's Panda symbol</h1>
+<p>The Panda has become the symbol of WWF. The well-known panda logo of WWF originated from a panda named Chi Chi that was transferred from the Beijing Zoo to the London Zoo in the same year of the establishment of WWF.</p>
+</section>
+
+HTML <article> Element
+======================
+
+-> The <article> element specifies independent, self-contained content.
+
+An article should make sense on its own, and it should be possible to distribute it independently from the rest of the web site.
+
+Examples of where the <article> element can be used:
+
+Forum posts
+Blog posts
+User comments
+Product cards
+Newspaper articles
+
+Code :
+====
+
+<article>
+<h2>Google Chrome</h2>
+<p>Google Chrome is a web browser developed by Google, released in 2008. Chrome is the world's most popular web browser today!</p>
+</article>
+
+<article>
+<h2>Mozilla Firefox</h2>
+<p>Mozilla Firefox is an open-source web browser developed by Mozilla. Firefox has been the second most popular web browser since January, 2018.</p>
+</article>
+
+<article>
+<h2>Microsoft Edge</h2>
+<p>Microsoft Edge is a web browser developed by Microsoft, released in 2015. Microsoft Edge replaced Internet Explorer.</p>
+</article>
+
+Nesting <article> in <section> or Vice Versa ? 
+=================================
+Yes.
+
+-> You will find HTML pages with <section> elements containing <article> elements, and <article> elements containing <section> elements.
+
+HTML <header> Element :
+======================
+
+-> The <header> element represents a container for introductory content or a set of navigational links.
+
+-> A <header> element typically contains:
+
+  one or more heading elements (<h1> - <h6>)
+   logo or icon
+  authorship information
+
+-> Note: You can have several <header> elements in one HTML document. However, <header> cannot be placed within a <footer>, <address> or another <header> element.
+
+Example Code :
+==============
+
+<article>
+  <header>
+    <h1>What Does WWF Do?</h1>
+    <p>WWF's mission:</p>
+  </header>
+  <p>WWF's mission is to stop the degradation of our planet's natural environment,
+  and build a future in which humans live in harmony with nature.</p>
+</article>
+
+HTML <footer> Element
+===================
+
+-> The <footer> element defines a footer for a document or section.
+
+-> A <footer> element typically contains:
+
+authorship information
+copyright information
+contact information
+sitemap
+back to top links
+related documents
+
+-> You can have several <footer> elements in one document.
+
+Example Code :
+=============
+
+<footer>
+  <p>Author: Hege Refsnes</p>
+  <p><a href="mailto:hege@example.com">hege@example.com</a></p>
+</footer>
+
+HTML <nav> Element
+==================
+
+-> The <nav> element defines a set of navigation links. It is useful for creating a navigation bar for our website.
+
+Note :
+====
+-> NOT all links of a document should be inside a <nav> element. The <nav> element is intended only for major blocks of navigation links.
+
+-> It is useful screen reader softwares.
+
+Example code :
+=============
+
+<nav>
+  <a href="/html/">HTML</a> |
+  <a href="/css/">CSS</a> |
+  <a href="/js/">JavaScript</a> |
+  <a href="/jquery/">jQuery</a>
+</nav>
+
+HTML <aside> Element
+====================
+
+-> The <aside> element defines some content aside from the content it is placed in (like a sidebar).
+
+-> The <aside> content should be indirectly related to the surrounding content.
+
+Example Code :
+============
+
+<p>My family and I visited The Epcot center this summer. The weather was nice, and Epcot was amazing! I had a great summer together with my family!</p>
+
+<aside>
+<h4>Epcot Center</h4>
+<p>Epcot is a theme park at Walt Disney World Resort featuring exciting attractions, international pavilions, award-winning fireworks and seasonal special events.</p>
+</aside>
+
+HTML <figure> and <figcaption> Elements
+=================================
+
+-> The <figure> tag specifies self-contained content, like illustrations, diagrams, photos, code listings, etc.
+
+-> The <figcaption> tag defines a caption for a <figure> element. The <figcaption> element can be placed as the first or as the last child of a <figure> element.
+
+-> The <img> element defines the actual image/illustration. 
+
+Example Code :
+=============
+
+<figure>
+  <img src="pic_trulli.jpg" alt="Trulli">
+  <figcaption>Fig1. - Trulli, Puglia, Italy.</figcaption>
+</figure>
+
+Why all these Semantic Elements ?
+======================
+
+According to the W3C: "A semantic Web allows data to be shared and reused across applications, enterprises, and communities."
+
+Summary of semantic elements with brief one-liners :
+=====================================
+
+
+<article>	Defines independent, self-contained content
+<aside>	Defines content aside from the page content
+<details>	Defines additional details that the user can view or hide
+<figcaption>	Defines a caption for a <figure> element
+<figure>	Specifies self-contained content, like illustrations, diagrams, photos, code listings, etc.
+<footer>	Defines a footer for a document or section
+<header>	Specifies a header for a document or section
+<main>	Specifies the main content of a document
+<mark>	Defines marked/highlighted text
+<nav>	Defines navigation links
+<section>	Defines a section in a document
+<summary>	Defines a visible heading for a <details> element
+<time>	Defines a date/time
+
+Non-Semantic Elements :
+====================
+
+<div> Tag :
+========
+
+-> The <div> HTML element is the generic container for flow content. 
+
+-> It has no effect on the content or layout until styled in some way using CSS
+
+->This is the tag that css takes help of for the styling that specific content which is enclosed between the <div></div>
+
+Some Key Points About div Tag :
+=======================
+
+-> The <div> tag defines a division or a section in an HTML document.
+
+-> The <div> tag is used as a container for HTML elements - which is then styled with CSS or manipulated with JavaScript.
+
+-> The <div> tag is easily styled by using the class or id attribute.
+
+-> Any sort of content can be put inside the <div> tag ! 
+
+-> Note: By default, browsers always place a line break before and after the <div> element.
+
+
+<span> Tag :
+==============
+
+-> The <span> tag is an inline container used to mark up a part of a text, or a part of a document.
+
+-> The <span> tag is easily styled by CSS or manipulated with JavaScript using the class or id attribute.
+
+-> The <span> tag is much like the <div> element, but <div> is a block-level element and <span> is an inline element.
+
+Example Code :
+=============
+
+A <span> element which is used to color a part of a text:
+
+<p>My mother has <span style="color:blue">blue</span> eyes.</p>
+
+============================================================
+
+
+Some Other Tags :
+================
+
+<textarea>: The Textarea element
+============================
+
+-> The <textarea> HTML element represents a multi-line plain-text editing control, useful when you want to allow users to enter a sizeable amount of free-form text, for example a comment on a review or feedback form.
+
+Example Code :
+===========
+
+<label for="story">Tell us your story:</label>
+
+<textarea id="story" name="story"
+          rows="5" cols="33">
+It was a dark and stormy night...
+</textarea>
+
+The above example demonstrates a number of features of <textarea>:
+
+-> An id attribute to allow the <textarea> to be associated with a <label> element for accessibility purposes
+-> A name attribute to set the name of the associated data point submitted to the server when the form is submitted.
+rows and cols attributes to allow you to specify an exact size for the <textarea> to take. Setting these is a good idea for consistency, as browser defaults can differ.
+-> Default content entered between the opening and closing tags. <textarea> does not support the value attribute.
+
+-> The <textarea> element also accepts several attributes common to form <input>s, such as autocomplete, autofocus, disabled, placeholder, readonly, and required.
+ 
+<video>: The Video Embed element
+==========================
+
+-> The <video> HTML element embeds a media player which supports video playback into the document. 
+
+-> You can use <video> for audio content as well, but the <audio> element may provide a more appropriate user experience.
+
+Example Code :
+============
+
+<video controls width="250">
+    <source src="/media/cc0-videos/flower.webm" type="video/webm">
+
+    <source src="/media/cc0-videos/flower.mp4" type="video/mp4">
+
+    Download the
+    <a href="/media/cc0-videos/flower.webm">WEBM</a>
+    or
+    <a href="/media/cc0-videos/flower.mp4">MP4</a>
+    video.
+</video>
+
+<track>: The Embed Text Track element :
+===============================
+
+-> The <track> HTML element is used as a child of the media elements, <audio> and <video>. 
+
+-> It lets you specify timed text tracks (or time-based data), for example to automatically handle subtitles. The tracks are formatted in WebVTT format (.vtt files) — Web Video Text Tracks.
+
+Example Code :
+==============
+
+<video controls
+       src="/media/cc0-videos/friday.mp4">
+    <track default
+           kind="captions"
+           srclang="en"
+           src="/media/examples/friday.vtt">
+    Download the
+    <a href="/media/cc0-videos/friday.mp4">MP4</a>
+    video, and
+    <a href="/media/examples/friday.vtt">subtitles</a>.
+</video>
+
+<audio>: The Embed Audio element
+===========================
+-> The <audio> tag is used to embed sound content in a document, such as music or other audio streams.
+
+-> The <audio> tag contains one or more <source> tags with different audio sources. The browser will choose the first source it supports.
+
+-> The text between the <audio> and </audio> tags will only be displayed in browsers that do not support the <audio> element.
+
+-> There are three supported audio formats in HTML: MP3, WAV, and OGG.
+
+Example Code :
+===========
+<audio controls>
+  <source src="horse.ogg" type="audio/ogg">
+  <source src="horse.mp3" type="audio/mpeg">
+  Your browser does not support the audio tag.
+</audio>
+
+Some of the audio attributes :
+====================
+
+Attribute	Value	Description
+autoplay	autoplay	Specifies that the audio will start playing as soon as it is ready
+controls	controls	Specifies that audio controls should be displayed (such as a play/pause button etc)
+loop	loop	Specifies that the audio will start over again, every time it is finished
+muted	muted	Specifies that the audio output should be muted
+preload	auto
+                   metadata
+                      none	Specifies if and how the author thinks the audio should be loaded when the page loads
+src	URL	Specifies the URL of the audio file
+
+<template>: The Content Template element
+=================================
+
+-> The <template> HTML element is a mechanism for holding HTML that is not to be rendered immediately when a page is loaded but may be instantiated subsequently during runtime using JavaScript.
+
+-> Think of a template as a content fragment that is being stored for subsequent use in the document. While the parser does process the contents of the <template> element while loading the page, it does so only to ensure that those contents are valid; the element's contents are not rendered, however.
+
+Example Code :
+=================
+
+<table id="producttable">
+  <thead>
+    <tr>
+      <td>UPC_Code</td>
+      <td>Product_Name</td>
+    </tr>
+  </thead>
+  <tbody>
+    <!-- existing data could optionally be included here -->
+  </tbody>
+</table>
+
+<template id="productrow">
+  <tr>
+    <td class="record"></td>
+    <td></td>
+  </tr>
+</template>
+
+<select>: The HTML Select element :
+=============================
+
+-> The <select> HTML element represents a control that provides a menu of options.
+
+Example Code :
+============
+
+<label for="pet-select">Choose a pet:</label>
+
+<select name="pets" id="pet-select">
+    <option value="">--Please choose an option--</option>
+    <option value="dog">Dog</option>
+    <option value="cat">Cat</option>
+    <option value="hamster">Hamster</option>
+    <option value="parrot">Parrot</option>
+    <option value="spider">Spider</option>
+    <option value="goldfish">Goldfish</option>
+</select>
+
+<script>: The Script element
+=====================
+
+-> The <script> HTML element is used to embed executable code or data; this is typically used to embed or refer to JavaScript code. 
+
+-> The <script> element can also be used with other languages, such as WebGL's GLSL shader programming language and JSON.
+
+<progress>: The Progress Indicator element
+=================================
+
+The <progress> HTML element displays an indicator showing the completion progress of a task, typically displayed as a progress bar.
+
+Example Code :
+============
+
+<label for="file">File progress:</label>
+
+<progress id="file" max="100" value="70"> 70% </progress>
+
+<picture>: The Picture element
+=====================
+
+The <picture> tag gives web developers more flexibility in specifying image resources.
+
+The most common use of the <picture> element will be for art direction in responsive designs. Instead of having one image that is scaled up or down based on the viewport width, multiple images can be designed to more nicely fill the browser viewport.
+
+The <picture> element contains two tags: one or more <source> tags and one <img> tag.
+
+The browser will look for the first <source> element where the media query matches the current viewport width, and then it will display the proper image (specified in the srcset attribute). The <img> element is required as the last child of the <picture> element, as a fallback option if none of the source tags matches.
+
+Tip: The <picture> element works "similar" to <video> and <audio>. You set up different sources, and the first source that fits the preferences is the one being used.
+
+Example Code :
+=============
+
+<picture>
+  <source media="(min-width:650px)" srcset="img_pink_flowers.jpg">
+  <source media="(min-width:465px)" srcset="img_white_flower.jpg">
+  <img src="img_orange_flowers.jpg" alt="Flowers" style="width:auto;">
+</picture>
+
+<optgroup>: The Option Group element :
+==============================
+
+-> The <optgroup> HTML element creates a grouping of options within a <select> element.
+
+<noscript>: The Noscript element :
+==========================
+
+-> The <noscript> HTML element defines a section of HTML to be inserted if a script type on the page is unsupported or if scripting is currently turned off in the browser.
+
+<mark>: The Mark Text element :
+=========================
+
+The <mark> HTML element represents text which is marked or highlighted for reference or notation purposes due to the marked passage's relevance in the enclosing context.
+
+<map>: The Image Map element
+=========================
+
+The <map> HTML element is used with <area> elements to define an image map (a clickable link area).
+
+Example Code :
+===========
+
+<map name="primary">
+  <area
+    shape="circle"
+    coords="75,75,75"
+    href="https://developer.mozilla.org/docs/Web/JavaScript"
+    target="_blank"
+    alt="JavaScript" />
+  <area
+    shape="circle"
+    coords="275,75,75"
+    href="https://developer.mozilla.org/docs/Web/CSS"
+    target="_blank"
+    alt="CSS" />
+</map>
+<img
+  usemap="#primary"
+  src="parrots.jpg"
+  alt="350 x 150 picture of two parrots" />
+
+<area>: The Image Map Area element
+===========================
+-> The <area> HTML element defines an area inside an image map that has predefined clickable areas. An image map allows geometric areas on an image to be associated with hypertext links.
+
+***show example in mdn documentation
+
+
+<link>: The External Resource Link element
+===============================
+
+-> The <link> HTML element specifies relationships between the current document and an external resource.
+
+-> This element is most commonly used to link to stylesheets, but is also used to establish site icons (both "favicon" style icons and icons for the home screen and apps on mobile devices) among other things.
+
+-> To link an external stylesheet, you'd include a <link> element inside your <head> like this:
+
+<link href="main.css" rel="stylesheet" />
+
+There are a number of other common types you'll come across. For example, a link to the site's favicon:
+
+<link rel="icon" href="favicon.ico" />
+
+HTML <fieldset> Tag
+===============
+
+-> The <fieldset> tag is used to group related elements in a form.
+
+-> The <fieldset> tag draws a box around the related elements.
+
+<legend>: The Field Set Legend element :
+===============================
+
+-> The <legend> HTML element represents a caption for the content of its parent <fieldset>.
+
+<fieldset>
+    <legend>Choose your favorite monster</legend>
+
+    <input type="radio" id="kraken" name="monster" value="K">
+    <label for="kraken">Kraken</label><br>
+
+    <input type="radio" id="sasquatch" name="monster" value="S">
+    <label for="sasquatch">Sasquatch</label><br>
+
+    <input type="radio" id="mothman" name="monster" value="M" />
+    <label for="mothman">Mothman</label>
+</fieldset>
+
+<iframe>: The Inline Frame element
+============================
+
+-> The <iframe> HTML element represents a nested browsing context, embedding another HTML page into the current one.
+
+Example :
+============
+
+<iframe id="inlineFrameExample"
+    title="Inline Frame Example"
+    width="300"
+    height="200"
+    src="https://www.openstreetmap.org/export/embed.html?bbox=-0.004017949104309083%2C51.47612752641776%2C0.00030577182769775396%2C51.478569861898606&layer=mapnik">
+</iframe>
+
+<embed>: The Embed External Content element 
+=================================
+
+-> The <embed> tag defines a container for an external resource, such as a web page, a picture, a media player, or a plug-in application.
+
+Example  Code:
+=========
+
+An embedded image:
+
+<embed type="image/jpg" src="pic_trulli.jpg" width="300" height="200">
+
+An embedded HTML page:
+
+<embed type="text/html" src="snippet.html" width="500" height="200">
+
+An embedded video:
+
+<embed type="video/webm" src="video.mp4" width="400" height="300">
+
+
+My Suggestion :
+================
+
+To display a picture, it is better to use the <img> tag.
+
+To display HTML, it is better to use the <iframe> tag.
+
+To display video or audio, it is better to use the <video> and <audio> tags.
+
+
+HTML <dl> Tag
+=============
+
+-> The <dl> tag defines a description list.
+
+-> The <dl> tag is used in conjunction with <dt> (description text => defines terms/names) and <dd>(description details => describes each term/name).
+
+Example Code :
+============
+
+<dl>
+  <dt>Coffee</dt>
+  <dd>Black hot drink</dd>
+  <dt>Milk</dt>
+  <dd>White cold drink</dd>
+</dl>
+
+HTML <dialog> Tag :
+==================
+
+-> The <dialog> HTML element represents a dialog box or other interactive component, such as a dismissible alert, inspector, or subwindow.
+
+Example Code :
+============
+
+<dialog open>
+  <p>Greetings, one and all!</p>
+  <form method="dialog">
+    <button>OK</button>
+  </form>
+</dialog>
+
+<blockquote>: The Block Quotation element
+==============================
+
+-> The <blockquote> HTML element indicates that the enclosed text is an extended quotation. 
+
+-> Usually, this is rendered visually by indentation. 
+
+-> A URL for the source of the quotation may be given using the cite attribute, while a text representation of the source can be given using the <cite> element.
+
+Example Code :
+============
+
+<figure>
+    <blockquote cite="https://www.huxley.net/bnw/four.html">
+        <p>Words can be like X-rays, if you use them properly—they’ll go through anything. You read and you’re pierced.</p>
+    </blockquote>
+    <figcaption>—Aldous Huxley, <cite>Brave New World</cite></figcaption>
+</figure>
+
+
+<del>: The Deleted Text element :
+======================
+-> The <del> HTML element represents a range of text that has been deleted from a document. 
+
+<ins>
+========
+-> The <ins> HTML element represents a range of text that has been added to a document. 
+
+Example Code :
+=============
+<blockquote>
+    There is <del>nothing</del> <ins>no code</ins> either good or bad, but <del>thinking</del> <ins>running it</ins> makes it so.
+</blockquote>
+
+<dfn>: The Definition element
+=======================
+
+-> The <dfn> HTML element is used to indicate the term being defined within the context of a definition phrase or sentence. 
+
+Example Code :
+===============
+
+<p>A <dfn id="def-validator">validator</dfn> is a program that checks for syntax errors in code or documents.</p>
+
+<details>: The Details disclosure element :
+============================
+
+-> The <details> HTML element creates a disclosure widget in which information is visible only when the widget is toggled into an "open" state. A summary or label must be provided using the <summary> element.
+
+Example Code :
+=============
+
+<details>
+    <summary>Details</summary>
+    Something small enough to escape casual notice.
+</details>
+
+<datalist>: The HTML Data List element
+==============================
+
+-> The <datalist> HTML element contains a set of <option> elements that represent the permissible or recommended options available to choose from within other controls.
+
+-> The <datalist> tag specifies a list of pre-defined options for an <input> element.
+
+-> The <datalist> tag is used to provide an "autocomplete" feature for <input> elements. Users will see a drop-down list of pre-defined options as they input data.
+
+-> The <datalist> element's id attribute must be equal to the <input> element's list attribute (this binds them together).
+
+A datalist with pre-defined options (connected to an <input> element):
+
+Example Code :
+================
+
+<label for="browser">Choose your browser from the list:</label>
+<input list="browsers" name="browser" id="browser">
+
+<datalist id="browsers">
+  <option value="Edge">
+  <option value="Firefox">
+  <option value="Chrome">
+  <option value="Opera">
+  <option value="Safari">
+</datalist>
+
+<data>: The Data element
+===================
+
+-> The <data> tag is used to add a machine-readable translation of a given content.
+
+-> This element provides both a machine-readable value for data processors, and a human-readable value for rendering in a browser.
+
+Example Code :
+============
+
+The following example displays product names but also associates each name with a product number:
+
+<ul>
+  <li><data value="21053">Cherry Tomato</data></li>
+  <li><data value="21054">Beef Tomato</data></li>
+  <li><data value="21055">Snack Tomato</data></li>
+</ul>
+
+<code>: The Inline Code element
+======================
+
+The <code> HTML element displays its contents styled in a fashion intended to indicate that the text is a short fragment of computer code. 
+
+Example Code :
+============
+
+<p>The <code>push()</code> method adds one or more elements to the end of an array and returns the new length of the array.</p>
+
+<bdo>: The Bidirectional Text Override element
+==================================
+
+-> The <bdo> HTML element overrides the current directionality of text, so that the text within is rendered in a different direction.
+
+Example Code :
+=================
+
+<h1>Famous seaside songs</h1>
+
+<p>The English song "Oh I do like to be beside the seaside"</p>
+
+<p>Looks like this in Hebrew: <span dir="rtl">אה, אני אוהב להיות ליד חוף הים</span></p>
+
+<p>In the computer's memory, this is stored as <bdo dir="ltr">אה, אני אוהב להיות ליד חוף הים</bdo></p>
+
+<bdi>: The Bidirectional Isolate element
+===========================
+
+-> The <bdi> HTML element tells the browser's bidirectional algorithm to treat the text it contains in isolation from its surrounding text. 
+
+-> It's particularly useful when a website dynamically inserts some text and doesn't know the directionality of the text being inserted.
+
+Example Code :
+=============
+
+<h1>World wrestling championships</h1>
+
+<ul>
+   <li><bdi class="name">Evil Steven</bdi>: 1st place</li>
+   <li><bdi class="name">François fatale</bdi>: 2nd place</li>
+   <li><span class="name">سما</span>: 3rd place</li>
+   <li><bdi class="name">الرجل القوي إيان</bdi>: 4th place</li>
+   <li><span class="name" dir="auto">سما</span>: 5th place</li>
+</ul>
+
+<base>: The Document Base URL element
+============================
+
+-> The <base> tag specifies the base URL and/or target for all relative URLs in a document.
+
+-> The <base> tag must have either an href or a target attribute present, or both.
+
+-> There can only be one single <base> element in a document, and it must be inside the <head> element.
+
+Example Code :
+=============
+
+Specify a default URL and a default target for all links on a page:
+
+<head>
+  <base href="https://www.w3schools.com/" target="_blank">
+</head>
+
+<body>
+<img src="images/stickman.gif" width="24" height="39" alt="Stickman">
+<a href="tags/tag_base.asp">HTML base Tag</a>
+</body>
+
+target attribute :
+==============
+
+-> The target attribute specifies the default target for all hyperlinks and forms in the page.
+
+-> This attribute can be overridden by using the target attribute for each hyperlink/form.
+
+_blank	Opens the link in a new window or tab
+_self	Default. Opens the link in the same frame as it was clicked
+_parent	Opens the link in the parent frame
+_top	Opens the link in the full body of the window
+
+<address>: The Contact Address element
+================================
+
+-> The <address> HTML element indicates that the enclosed HTML provides contact information for a person or people, or for an organization.
+
+Example Code :
+==========
+
+<p>Contact the author of this page:</p>
+
+<address>
+  <a href="mailto:jim@rock.com">jim@rock.com</a><br>
+  <a href="tel:+13115552368">(311) 555-2368</a>
+</address>
+
+<abbr>: The Abbreviation element
+=======================
+
+The <abbr> HTML element represents an abbreviation or acronym.
+
+Example Code :
+===========
+
+<p>You can use <abbr>CSS</abbr> (Cascading Style Sheets) to style your <abbr>HTML</abbr> (HyperText Markup Language). Using style sheets, you can keep your <abbr>CSS</abbr> presentation layer and <abbr>HTML</abbr> content layer separate. This is called "separation of concerns."</p>
+
+<canvas>: The Graphics Canvas element
+============================
+
+-> The <canvas> tag is used to draw graphics, on the fly, via scripting (usually JavaScript).
+
+-> The <canvas> tag is transparent, and is only a container for graphics, you must use a script to actually draw the graphics.
+
+Entity elements :
+==========
+
+<	Less than(start of html element)	                    &lt;	                   &#60;
+>	Greater than(end of html element)	&gt;	&#62;
+“	Double quotation	&quot;	&#34;
+&	Ampersand ( beginning of html entity)	&amp;	&#38;
+
+
+Example 1: In the first example, we are using html entity names to display body element and paragraph element on web page.
+
+
+<!DOCTYPE html>
+<html>
+  
+<head>
+    <title>Plain text </title>
+</head>
+  
+<body>
+    <pre>
+        Paragraph element: <p> </p>
+        Body element : < body > < /body >
+    </pre>
+</body>
+  
+</html>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
